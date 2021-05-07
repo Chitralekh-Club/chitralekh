@@ -1,0 +1,888 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="intro.css">
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+   <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+   <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <title>Chitralekh Club</title>
+    <style>
+     
+        /*nav*/
+    .menu {
+	    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 21;
+    right: 1%;
+}
+.menu span {
+	position: relative;
+	margin-top: 9px;
+	margin-bottom: 9px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -1.5px;
+}
+.menu span, .menu span::before, .menu span::after {
+	display: block;
+	
+		width: 26px;
+	right: 0;
+	height: 3px;
+	background-color: #fccb32;
+	outline: 1px solid transparent;
+	-webkit-transition-property: background-color, -webkit-transform;
+	-moz-transition-property: background-color, -moz-transform;
+	-o-transition-property: background-color, -o-transform;
+	transition-property: background-color, transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.menu span::before, .menu span::after {
+	position: absolute;
+	content: "";
+}
+.menu span::before {
+	top: -9px;
+	 width:20px
+}
+.menu span::after {
+	top: 9px;width: 33px;
+
+}
+.menu.clicked span {
+	background-color: transparent;
+}
+.menu.clicked span::before {
+	-webkit-transform: translateY(9px) rotate(45deg);
+	-moz-transform: translateY(9px) rotate(45deg);
+	-ms-transform: translateY(9px) rotate(45deg);
+	-o-transform: translateY(9px) rotate(45deg);
+	transform: translateY(9px) rotate(45deg);    width: 33px;
+}
+.menu.clicked span::after {
+	-webkit-transform: translateY(-9px) rotate(-45deg);
+	-moz-transform: translateY(-9px) rotate(-45deg);
+	-ms-transform: translateY(-9px) rotate(-45deg);
+	-o-transform: translateY(-9px) rotate(-45deg);
+	transform: translateY(-9px) rotate(-45deg);
+}
+.menu.clicked span:before, .menu.clicked span:after {
+	background-color: #ffffff;
+}
+.menu:hover {
+	cursor: pointer;
+}
+/*  NAV
+========================================== */
+
+#nav {
+	background: #211316;
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	right: 0;
+	height: 100%;
+	max-width: 250px;
+	width: 100%;
+	padding: 100px 40px 60px 40px;
+	overflow-y: auto;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-moz-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-o-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+#nav.show {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+}
+#nav.show ul.main li {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
+.menu.clicked {
+    position: fixed;
+    z-index: 99;
+}
+#nav.show ul.main li:nth-child(1) {
+	transition-delay: 0.15s;
+}
+#nav.show ul.main li:nth-child(2) {
+	transition-delay: 0.3s;
+}
+#nav.show ul.main li:nth-child(3) {
+	transition-delay: 0.45s;
+}
+#nav.show ul.main li:nth-child(4) {
+	transition-delay: 0.6s;
+}
+#nav.show ul.main li:nth-child(5) {
+	transition-delay: 0.75s;
+}
+#nav.show ul.main li:nth-child(6) {
+	transition-delay: 0.9s;
+}
+#nav.show ul.main li:nth-child(7) {
+	transition-delay: 1.05s;
+}
+#nav.show ul.main li:nth-child(8) {
+	transition-delay: 1.2s;
+}
+#nav.show ul.main li:nth-child(9) {
+	transition-delay: 1.35s;
+}
+#nav.show .about, #nav.show .social, #nav.show ul.sub {
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	opacity: 1;
+	transition-delay: .85s;
+}
+
+@media (min-width: 667px) {
+#nav {
+	padding: 120px 30px 70px 20px;
+}
+}
+#nav ul.main {
+	list-style-type: none;
+}
+#nav ul.main li {
+	-webkit-transform: translateX(40px);
+	-moz-transform: translateX(40px);
+	-ms-transform: translateX(40px);
+	-o-transform: translateX(40px);
+	transform: translateX(40px);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	float: none;
+	    list-style: circle;
+    color: #fff
+}
+#nav ul.main li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.main li a {
+	color: #ffffff;
+	
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1rem;
+	display: block;
+	padding: 10px 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.main li a span {
+	color: #b7ac7f;
+}
+#nav ul.main li a:hover {
+	color: #b7ac7f;
+}
+#nav ul.sub {
+	list-style-type: none;
+	margin-top: 40px;
+	-webkit-transform: translateY(30px);
+	-moz-transform: translateY(30px);
+	-ms-transform: translateY(30px);
+	-o-transform: translateY(30px);
+	transform: translateY(30px);
+	opacity: 0;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+#nav ul.sub li {
+	margin-bottom: 10px;
+}
+#nav ul.sub li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.sub li a {
+	color: #ffffff;
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 1px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.sub li a:hover {
+	color: #b7ac7f;
+}
+.menu:hover span{}
+
+/*  OVERLAY
+========================================== */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #603e82;
+	opacity: 0;
+	visibility: hidden;
+}
+.overlay.show {
+	opacity: 0.8;
+	visibility: visible;
+}    
+  
+/*footer*/
+ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+.footer_area {
+	padding:60px 0 20px;
+	position: relative;
+	color: #fff;
+	z-index: 100;
+	background: #222;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.single_ftr form{
+	margin-top: 8px;
+}
+.single_ftr p{
+	margin-bottom: 10px;
+}
+
+.sf_title{
+    color: #33d286;
+    text-transform: uppercase;
+    font-size: 17px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+.ftr_logo {
+    float: left;
+    padding: 15px 46px 0 0;
+}
+.ftr_logo a img {
+    transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+}
+.ftr_logo a:hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+.newsletter_form form{
+	position: relative;
+	display: block;
+}
+.newsletter_form {
+	margin-top: 0px;
+	overflow: hidden;
+}
+.single_ftr p{
+	display: inline-block;
+}
+.newsletter_form .form-control {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 8px 20px;
+    width: 100%;
+	position: relative;
+	background: transparent;
+	color: #fff;
+	border-radius: 0;
+}
+
+.newsletter_form button {
+	border: inherit;
+	border-radius: 0;
+	background: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: none;
+	border: 1px solid transparent;
+	transition: 0.5s;
+	letter-spacing: 0.5px;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	padding: 12px 17px;
+	transition: .5s;
+}
+.newsletter_form button:hover,
+.newsletter_form button:hover{
+	background: transparent;
+	color: #33d286;
+	opacity: .9;
+}
+.newsletter_form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    opacity: 1
+}
+
+.newsletter_form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: 1
+}
+.form-control{
+
+}
+.form-control:focus{
+	border-color: #33d286;
+}
+
+.single_ftr li {
+    padding-bottom: 7px;
+    color: #fff;
+}
+.single_ftr a {
+    color: #fff;
+}
+.single_ftr a:hover {
+    color: #33d286;
+}
+
+.ftr_social_icon li {
+	display: inline-block;
+	text-align: center;
+	padding: 4px;
+}
+
+
+.ftr_social_icon ul li a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 17px;
+    height: 40px;
+    line-height: 32px;
+    padding: 4px 8px;
+    width: 40px;
+	transition: .5s;
+}
+.ftr_social_icon ul li a:hover{
+	background: #33d286;
+	border-color: #33d286;
+	color: #fff;
+}
+
+.ftr_btm_area {
+	background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px dotted #888;
+	margin-top: 28px;
+	z-index: 100;
+	position: relative;
+}
+.copyright_text{
+    margin: 6px 0;
+}
+.payment_mthd_icon li {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 30px;
+	color: #fff;
+}
+/*team*/
+.team {
+    text-align: center
+}
+
+.section {
+    padding: 60px 0
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 0
+}
+
+.team .team-item {
+    text-align: left;
+    margin-bottom: 30px;
+    overflow: hidden
+}
+
+.team .team-item figure {
+    position: relative;
+    overflow: hidden
+}
+
+
+
+.team .team-item figure figcaption {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(9, 9, 9, .6);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease
+}
+.team .team-item figure:hover figcaption {
+    opacity: 1
+}
+
+.team .team-item figure:hover figcaption .info {
+    margin-left: 0
+}
+.team .team-item figure figcaption .info h3 {
+    font-size: 20px
+}
+
+.team .team-item figure figcaption .info p {
+    color: #fff
+}
+.team .team-item figure figcaption .info {
+    position: absolute;
+    color: #fff;
+    float: left;
+    bottom: 10px;
+    left: 20px;
+    margin-left: -80px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease
+}
+.team {
+    text-align: center
+}
+
+.section {
+    padding: 20px 0
+}
+
+
+/*head*/
+.text-center {
+    text-align: center;
+}
+.heading-title h3 {
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+.p-top-30 {
+    padding-top: 30px;
+}
+.half-txt {
+    width: 60%;
+    margin: 0 auto;
+    display: inline-block;
+    line-height: 25px;
+    color: #7e7e7e;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.head-member, .head-member .head-img {
+    position: relative;
+}
+.head-member {
+    overflow: hidden;
+}
+.head-member, .head-member .head-img {
+    position: relative;
+}
+
+.head-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.90);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.head-member:hover .head-hover .desk {
+    top: 35%;
+}
+.head-member:hover .head-hover, .head-member:hover .head-hover .desk, .head-member:hover .head-hover .s-link {
+    opacity: 1;
+}
+.head-hover .desk {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    padding: 0 20px;
+}
+.desk, .desk h4, .head-hover .s-link a {
+    text-align: center;
+    color: #222;
+}
+.head-member:hover .head-hover .s-link {
+    bottom: 10%;
+}
+.head-member:hover .head-hover, .head-member:hover .head-hover .desk, .head-member:hover .head-hover .s-link {
+    opacity: 1;
+}
+.head-hover .s-link {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    -webkit-transform: translateY(45%);
+    -ms-transform: translateY(45%);
+    transform: translateY(45%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    font-size: 35px;
+}
+.desk, .desk h4, .head-hover .s-link a {
+    text-align: center;
+    color: #222;
+}
+.head-member .s-link a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 16px;
+}
+.head-title {
+    position: static;
+    padding: 20px 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+}
+.head-title h5 {
+    margin-bottom: 0px;
+    display: block;
+    text-transform: uppercase;
+}
+.head-title span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a5a5a5;
+    letter-spacing: 1px;
+}
+
+
+
+ </style>
+  </head>
+  <body>
+    <div class="menu"> <span></span> </div>
+<nav id="nav">
+		<ul class="main">
+				<li><a target="_blank" href="main.html">HOME</a></li>
+				<li><a target="_blank" href="contact.html">OUR TEAM</a></li>
+				<li><a href="2020.html">2020</a></li>
+				<li><a href="coming.html">2021(REGISTER)</a></li>
+				<li><a target="_blank" href="coming.html">GALLERY</a></li>
+				<li><a target="_blank" href="coming.html">NEXT EVENT</a></li>
+		</ul>
+</nav>
+<div class="overlay"></div> 
+
+
+
+<div class="container">
+                    <div class="row">
+                        <div class="heading-title text-center"><br><br><br><br>
+                            <center>    <h3 class="text-uppercase"><strong>Meet Our professionals</strong> </h3></center>
+                           
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+
+                       
+                        <div class="col-md-4 col-sm-4">
+                            <div class="head-member">
+                                <div class="head-img">
+                                    <img src="head.jpeg" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="head-hover">
+                                    <div class="desk">
+                                        <h4>HEAD OF CLUB</h4>
+                                        <p>The one who start this club and manage all the things in one hand.</p>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="head-title">
+                                <h5>SACHIN SAHU</h5>
+                                <span>HEAD</span>
+                            </div>
+                        </div>
+                       
+
+                    </div>
+
+                
+
+
+
+ <section class="team section">
+    <div class="container">
+      
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="team-item">
+                    <figure> <img src="team1.jpeg" alt="">
+                        <figcaption>
+                            <div class="info">
+                                <h3>Arpita Maheswari Singh</h3>
+                                <p>Club Coordinator</p>
+                            </div>
+                           
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="team-item">
+                    <figure> <img src="team7.jpeg" alt="">
+                        <figcaption>
+                            <div class="info">
+                                <h3>Suyash Chaudhary</h3>
+                                <p> Developer</p>
+                            </div>
+                           
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="team-item">
+                    <figure> <img src="team2.jpeg" alt="">
+                        <figcaption>
+                            <div class="info">
+                                <h3>Yashi Agarwal</h3>
+                                <p>Designer</p>
+                            </div>
+                           
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+             <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="team-item">
+                    <figure> <img src="team10.jpeg" alt="">
+                        <figcaption>
+                            <div class="info">
+                                <h3>Shubhashree Joshi</h3>
+                                <p>Content Creator</p>
+                            </div>
+                            
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+   
+
+    
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+<footer class="footer_area">
+			<div class="container">
+				<div class="row">				
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Connect with Professional</h4>
+							<ul>
+                                                            <li> <a href="contat.html">Club Coordinator</a></li>
+								<li><a href="contat.html">Developer</a></li>
+                                                                <li><a href="contat.html">Designer</a></li>
+                                                                <li><a href="contat.html">Content Creator</a></li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Information</h4>
+							<ul>
+								<li><a href="#services">About Us</a></li>
+								<li><a href="main.html">What we do</a></li>
+								<li><a href="#">Gallery</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Competition</h4>
+							<ul>
+								<li><a href="#">Photography</a></li>
+								<li><a href="#">Videography</a></li>
+								<li><a href="#">Writing</a></li>
+								<li><a href="#">Art</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->	
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Contact Us</h4>
+							<div class="newsletter_form">
+								<p>Email:- chitralekh2021@gmail.com</p>
+								
+							</div>
+						</div>
+					</div> <!--  End Col -->
+					
+				</div>
+			</div>
+	
+		
+			<div class="ftr_btm_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="ftr_social_icon">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com/chitralekh_/"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<p class="copyright_text text-center">© 2021 Beta Version</p>
+						</div>
+						
+						<div class="col-sm-4">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+      
+      <script>
+        $('.menu, .overlay').click(function () {
+	$('.menu').toggleClass('clicked');
+	
+	$('#nav').toggleClass('show');
+	
+});  
+          
+      </script>
+     
+      <script type="text/javascript" src="//use.typekit.net/npe3lft.js">
+          
+      </script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}
+</script>
+<script>
+   
+</script>      
+      
+      
+  </body>
+</html>

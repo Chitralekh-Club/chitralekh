@@ -1,0 +1,846 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+
+    <title>Chitralekh Club</title>
+    <style>
+         /*nav*/
+    .menu {
+	    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 21;
+    right: 1%;
+}
+.menu span {
+	position: relative;
+	margin-top: 9px;
+	margin-bottom: 9px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -1.5px;
+}
+.menu span, .menu span::before, .menu span::after {
+	display: block;
+	
+		width: 26px;
+	right: 0;
+	height: 3px;
+	background-color: #fccb32;
+	outline: 1px solid transparent;
+	-webkit-transition-property: background-color, -webkit-transform;
+	-moz-transition-property: background-color, -moz-transform;
+	-o-transition-property: background-color, -o-transform;
+	transition-property: background-color, transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.menu span::before, .menu span::after {
+	position: absolute;
+	content: "";
+}
+.menu span::before {
+	top: -9px;
+	 width:20px
+}
+.menu span::after {
+	top: 9px;width: 33px;
+
+}
+.menu.clicked span {
+	background-color: transparent;
+}
+.menu.clicked span::before {
+	-webkit-transform: translateY(9px) rotate(45deg);
+	-moz-transform: translateY(9px) rotate(45deg);
+	-ms-transform: translateY(9px) rotate(45deg);
+	-o-transform: translateY(9px) rotate(45deg);
+	transform: translateY(9px) rotate(45deg);    width: 33px;
+}
+.menu.clicked span::after {
+	-webkit-transform: translateY(-9px) rotate(-45deg);
+	-moz-transform: translateY(-9px) rotate(-45deg);
+	-ms-transform: translateY(-9px) rotate(-45deg);
+	-o-transform: translateY(-9px) rotate(-45deg);
+	transform: translateY(-9px) rotate(-45deg);
+}
+.menu.clicked span:before, .menu.clicked span:after {
+	background-color: #ffffff;
+}
+.menu:hover {
+	cursor: pointer;
+}
+/*  NAV
+========================================== */
+
+#nav {
+	background: #211316;
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	right: 0;
+	height: 100%;
+	max-width: 250px;
+	width: 100%;
+	padding: 100px 40px 60px 40px;
+	overflow-y: auto;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-moz-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-o-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+#nav.show {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+}
+#nav.show ul.main li {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
+.menu.clicked {
+    position: fixed;
+    z-index: 99;
+}
+#nav.show ul.main li:nth-child(1) {
+	transition-delay: 0.15s;
+}
+#nav.show ul.main li:nth-child(2) {
+	transition-delay: 0.3s;
+}
+#nav.show ul.main li:nth-child(3) {
+	transition-delay: 0.45s;
+}
+#nav.show ul.main li:nth-child(4) {
+	transition-delay: 0.6s;
+}
+#nav.show ul.main li:nth-child(5) {
+	transition-delay: 0.75s;
+}
+#nav.show ul.main li:nth-child(6) {
+	transition-delay: 0.9s;
+}
+#nav.show ul.main li:nth-child(7) {
+	transition-delay: 1.05s;
+}
+#nav.show ul.main li:nth-child(8) {
+	transition-delay: 1.2s;
+}
+#nav.show ul.main li:nth-child(9) {
+	transition-delay: 1.35s;
+}
+#nav.show .about, #nav.show .social, #nav.show ul.sub {
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	opacity: 1;
+	transition-delay: .85s;
+}
+
+@media (min-width: 667px) {
+#nav {
+	padding: 120px 30px 70px 20px;
+}
+}
+#nav ul.main {
+	list-style-type: none;
+}
+#nav ul.main li {
+	-webkit-transform: translateX(40px);
+	-moz-transform: translateX(40px);
+	-ms-transform: translateX(40px);
+	-o-transform: translateX(40px);
+	transform: translateX(40px);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	float: none;
+	    list-style: circle;
+    color: #fff
+}
+#nav ul.main li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.main li a {
+	color: #ffffff;
+	
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1rem;
+	display: block;
+	padding: 10px 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.main li a span {
+	color: #b7ac7f;
+}
+#nav ul.main li a:hover {
+	color: #b7ac7f;
+}
+#nav ul.sub {
+	list-style-type: none;
+	margin-top: 40px;
+	-webkit-transform: translateY(30px);
+	-moz-transform: translateY(30px);
+	-ms-transform: translateY(30px);
+	-o-transform: translateY(30px);
+	transform: translateY(30px);
+	opacity: 0;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+#nav ul.sub li {
+	margin-bottom: 10px;
+}
+#nav ul.sub li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.sub li a {
+	color: #ffffff;
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 1px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.sub li a:hover {
+	color: #b7ac7f;
+}
+.menu:hover span{}
+
+/*  OVERLAY
+========================================== */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #603e82;
+	opacity: 0;
+	visibility: hidden;
+}
+.overlay.show {
+	opacity: 0.8;
+	visibility: visible;
+}    
+  
+/*footer*/
+ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+.footer_area {
+	padding:60px 0 20px;
+	position: relative;
+	color: #fff;
+	z-index: 100;
+	background: #222;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.single_ftr form{
+	margin-top: 8px;
+}
+.single_ftr p{
+	margin-bottom: 10px;
+}
+
+.sf_title{
+    color: #33d286;
+    text-transform: uppercase;
+    font-size: 17px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+.ftr_logo {
+    float: left;
+    padding: 15px 46px 0 0;
+}
+.ftr_logo a img {
+    transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+}
+.ftr_logo a:hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+.newsletter_form form{
+	position: relative;
+	display: block;
+}
+.newsletter_form {
+	margin-top: 0px;
+	overflow: hidden;
+}
+.single_ftr p{
+	display: inline-block;
+}
+.newsletter_form .form-control {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 8px 20px;
+    width: 100%;
+	position: relative;
+	background: transparent;
+	color: #fff;
+	border-radius: 0;
+}
+
+.newsletter_form button {
+	border: inherit;
+	border-radius: 0;
+	background: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: none;
+	border: 1px solid transparent;
+	transition: 0.5s;
+	letter-spacing: 0.5px;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	padding: 12px 17px;
+	transition: .5s;
+}
+.newsletter_form button:hover,
+.newsletter_form button:hover{
+	background: transparent;
+	color: #33d286;
+	opacity: .9;
+}
+.newsletter_form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    opacity: 1
+}
+
+.newsletter_form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: 1
+}
+.form-control{
+
+}
+.form-control:focus{
+	border-color: #33d286;
+}
+
+.single_ftr li {
+    padding-bottom: 7px;
+    color: #fff;
+}
+.single_ftr a {
+    color: #fff;
+}
+.single_ftr a:hover {
+    color: #33d286;
+}
+
+.ftr_social_icon li {
+	display: inline-block;
+	text-align: center;
+	padding: 4px;
+}
+
+
+.ftr_social_icon ul li a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 17px;
+    height: 40px;
+    line-height: 32px;
+    padding: 4px 8px;
+    width: 40px;
+	transition: .5s;
+}
+.ftr_social_icon ul li a:hover{
+	background: #33d286;
+	border-color: #33d286;
+	color: #fff;
+}
+
+.ftr_btm_area {
+	background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px dotted #888;
+	margin-top: 28px;
+	z-index: 100;
+	position: relative;
+}
+.copyright_text{
+    margin: 6px 0;
+}
+.payment_mthd_icon li {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 30px;
+	color: #fff;
+}
+/*Gallery*/
+.portfolio-menu{
+	text-align:center;
+}
+.portfolio-menu ul li{
+	display:inline-block;
+	margin:0;
+	list-style:none;
+	padding:10px 15px;
+	cursor:pointer;
+	-webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
+}
+
+.portfolio-item{
+	/*width:100%;*/
+}
+.portfolio-item .item{
+	/*width:303px;*/
+	float:left;
+	margin-bottom:10px;
+}
+
+        
+    </style>
+  </head>
+  
+  <body>
+   
+      <div class="menu"> <span></span> </div>
+<nav id="nav">
+		<ul class="main">
+				<li><a target="_blank" href="main.html">HOME</a></li>
+				<li><a target="_blank" href="contact.html">OUR TEAM</a></li>
+				<li><a href="2020.html">2020</a></li>
+				<li><a href="coming.html">2021(REGISTER)</a></li>
+				<li><a target="_blank" href="Our Gallery.html">GALLERY</a></li>
+				<li><a target="_blank" href="coming.html">NEXT EVENT</a></li>
+		</ul>
+</nav>
+<div class="overlay"></div> 
+
+ <div class="container">
+         <div class="row">
+            <div class="col-lg-12 text-center my-2">
+               <h4>Isotope filter magical layouts with Bootstrap 4</h4>
+            </div>
+         </div>
+         <div class="portfolio-menu mt-2 mb-4">
+            <ul>
+               <li class="btn btn-outline-dark active" data-filter="*">All</li>
+               <li class="btn btn-outline-dark" data-filter=".gts">Girls T-shirt</li>
+               <li class="btn btn-outline-dark" data-filter=".lap">Laptops</li>
+               <li class="btn btn-outline-dark text" data-filter=".selfie">selfie</li>
+            </ul>
+         </div>
+         <div class="portfolio-item row">
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/stylish-pin-up-girls_1157-18451.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-pin-up-girls_1157-18451.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/stylish-pin-up-girl_1157-18940.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-pin-up-girl_1157-18940.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/digital-laptop-working-global-business-concept_53876-23438.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/digital-laptop-working-global-business-concept_53876-23438.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-psd/set-digital-devices-screen-mockup_53876-76507.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-psd/set-digital-devices-screen-mockup_53876-76507.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/young-brunette-woman-with-sunglasses-urban-background_1139-893.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/young-brunette-woman-with-sunglasses-urban-background_1139-893.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-psd/laptop-digital-device-screen-mockup_53876-76509.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-psd/laptop-digital-device-screen-mockup_53876-76509.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/young-woman-holding-pen-hand-thinking-while-writing-notebook_23-2148029424.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/young-woman-holding-pen-hand-thinking-while-writing-notebook_23-2148029424.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-psd/female-fashion-concept_23-2147643598.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-psd/female-fashion-concept_23-2147643598.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/girl-city_1157-16454.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/girl-city_1157-16454.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/elegant-lady-with-laptop_1157-16643.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/elegant-lady-with-laptop_1157-16643.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-psd/laptop-mock-up-lateral-view_1310-199.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-psd/laptop-mock-up-lateral-view_1310-199.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/portrait-young-woman_1303-10071.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/portrait-young-woman_1303-10071.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/beautiful-girl-near-wall_1157-16401.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/beautiful-girl-near-wall_1157-16401.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/woman-taking-photograph-her-boyfriend-enjoying-piggyback-ride-his-back_23-2147841613.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/woman-taking-photograph-her-boyfriend-enjoying-piggyback-ride-his-back_23-2147841613.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/girl-smiling-making-auto-photo-with-her-friends-around_1139-593.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/girl-smiling-making-auto-photo-with-her-friends-around_1139-593.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/multiracial-group-young-people-taking-selfie_1139-1032.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/multiracial-group-young-people-taking-selfie_1139-1032.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/laptop-wooden-table_53876-20635.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/laptop-wooden-table_53876-20635.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/business-woman-working-laptop_1388-67.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/business-woman-working-laptop_1388-67.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-psd/group-people-holding-laptop-mockup-charity_23-2148069565.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-psd/group-people-holding-laptop-mockup-charity_23-2148069565.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/portrait-young-cheerful-woman-headphones-sitting-stairs_1262-17488.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/portrait-young-cheerful-woman-headphones-sitting-stairs_1262-17488.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/celebration-concept-close-up-portrait-happy-young-beautiful-african-woman-black-t-shirt-smiling-with-colorful-party-balloon-yellow-pastel-studio-background_1258-934.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/celebration-concept-close-up-portrait-happy-young-beautiful-african-woman-black-t-shirt-smiling-with-colorful-party-balloon-yellow-pastel-studio-background_1258-934.jpg" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/pretty-woman-showing-arm-muscles_23-2148056021.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/pretty-woman-showing-arm-muscles_23-2148056021.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/blank-colorful-adhesive-notes-against-wooden-wall-with-office-stationeries-laptop_23-2148052717.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/blank-colorful-adhesive-notes-against-wooden-wall-with-office-stationeries-laptop_23-2148052717.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/happy-woman-having-video-call-using-laptop-office_23-2148056211.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/happy-woman-having-video-call-using-laptop-office_23-2148056211.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-psd/laptop-mockup-table-with-plants_23-2147955548.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-psd/laptop-mockup-table-with-plants_23-2147955548.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/blank-colorful-adhesive-notes-against-wooden-wall-with-office-stationeries-laptop_23-2148052717.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/blank-colorful-adhesive-notes-against-wooden-wall-with-office-stationeries-laptop_23-2148052717.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-psd/woman-using-laptop-smartphone_53876-76350.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-psd/woman-using-laptop-smartphone_53876-76350.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/attractive-young-woman-with-curly-hair-takes-selfie-posing-looking-camera_8353-6636.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/attractive-young-woman-with-curly-hair-takes-selfie-posing-looking-camera_8353-6636.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/young-couple-taking-selfie-mobile-phone-against-blue-background_23-2148056292.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/young-couple-taking-selfie-mobile-phone-against-blue-background_23-2148056292.jpg" alt="">
+               </a>
+            </div>
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/close-up-blonde-woman-sitting-sofa-using-laptop-with-blank-white-screen_23-2148028738.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/close-up-blonde-woman-sitting-sofa-using-laptop-with-blank-white-screen_23-2148028738.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/group-happy-friends-taking-selfie-cellphone_23-2147859575.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/group-happy-friends-taking-selfie-cellphone_23-2147859575.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/joyful-pretty-girl-with-curly-hair-takes-selfie-mobile-phone_8353-6635.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/joyful-pretty-girl-with-curly-hair-takes-selfie-mobile-phone_8353-6635.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/attractive-young-woman-with-curly-hair-takes-selfie-posing-looking-camera_8353-6636.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/attractive-young-woman-with-curly-hair-takes-selfie-posing-looking-camera_8353-6636.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/multiracial-group-young-people-taking-selfie_1139-1032.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/multiracial-group-young-people-taking-selfie_1139-1032.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/two-smiling-girls-take-selfie-their-phones-posing-with-lollipops_8353-5600.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/two-smiling-girls-take-selfie-their-phones-posing-with-lollipops_8353-5600.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/female-friends-sitting-car-hood-taking-self-portrait_23-2147855623.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/female-friends-sitting-car-hood-taking-self-portrait_23-2147855623.jpg" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+               <a href="https://image.freepik.com/free-photo/two-smiling-girls-take-selfie-their-phones-posing-with-lollipops_8353-5600.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+               <img class="img-fluid" src="https://image.freepik.com/free-photo/two-smiling-girls-take-selfie-their-phones-posing-with-lollipops_8353-5600.jpg" alt="">
+               </a>
+            </div>
+         </div>
+      </div>
+      
+
+
+<footer class="footer_area">
+			<div class="container">
+				<div class="row">				
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Connect with Professional</h4>
+							<ul>
+                                                            <li> <a href="contat.html">Club Coordinator</a></li>
+								<li><a href="contat.html">Developer</a></li>
+                                                                <li><a href="contat.html">Designer</a></li>
+                                                                <li><a href="contat.html">Content Creator</a></li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Information</h4>
+							<ul>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">What we do</a></li>
+								<li><a href="#">Gallery</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Competition</h4>
+							<ul>
+								<li><a href="#">Photography</a></li>
+								<li><a href="#">Videography</a></li>
+								<li><a href="#">Writing</a></li>
+								<li><a href="#">Art</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->	
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Contact Us</h4>
+							<div class="newsletter_form">
+								<p>Email:- chitralekh2021@gmail.com</p>
+								
+							</div>
+						</div>
+					</div> <!--  End Col -->
+					
+				</div>
+			</div>
+	
+		
+			<div class="ftr_btm_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="ftr_social_icon">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<p class="copyright_text text-center">© 2021 Beta Version</p>
+						</div>
+						
+						<div class="col-sm-4">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+      
+      
+      <script>
+        $('.menu, .overlay').click(function () {
+	$('.menu').toggleClass('clicked');
+	
+	$('#nav').toggleClass('show');
+	
+});  
+          
+      </script>
+      
+      <script>
+          $('.portfolio-menu ul li').click(function(){
+         	$('.portfolio-menu ul li').removeClass('active');
+         	$(this).addClass('active');
+         	
+         	var selector = $(this).attr('data-filter');
+         	$('.portfolio-item').isotope({
+         		filter:selector
+         	});
+         	return  false;
+         });
+         $(document).ready(function() {
+         var popup_btn = $('.popup-btn');
+         popup_btn.magnificPopup({
+         type : 'image',
+         gallery : {
+         	enabled : true
+         }
+         });
+         }); 
+          
+      </script>
+      
+  </body>
+</html>

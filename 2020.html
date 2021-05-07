@@ -1,0 +1,1050 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+   <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+   <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+  
+    <title>Chitralekh Club</title>
+    <style>
+     
+        /*nav*/
+    .menu {
+	    width: 60px;
+    height: 50px;
+    position: absolute;
+    z-index: 21;
+    right: 1%;
+}
+.menu span {
+	position: relative;
+	margin-top: 9px;
+	margin-bottom: 9px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -1.5px;
+}
+.menu span, .menu span::before, .menu span::after {
+	display: block;
+	
+		width: 26px;
+	right: 0;
+	height: 3px;
+	background-color: #fccb32;
+	outline: 1px solid transparent;
+	-webkit-transition-property: background-color, -webkit-transform;
+	-moz-transition-property: background-color, -moz-transform;
+	-o-transition-property: background-color, -o-transform;
+	transition-property: background-color, transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.menu span::before, .menu span::after {
+	position: absolute;
+	content: "";
+}
+.menu span::before {
+	top: -9px;
+	 width:20px
+}
+.menu span::after {
+	top: 9px;width: 33px;
+
+}
+.menu.clicked span {
+	background-color: transparent;
+}
+.menu.clicked span::before {
+	-webkit-transform: translateY(9px) rotate(45deg);
+	-moz-transform: translateY(9px) rotate(45deg);
+	-ms-transform: translateY(9px) rotate(45deg);
+	-o-transform: translateY(9px) rotate(45deg);
+	transform: translateY(9px) rotate(45deg);    width: 33px;
+}
+.menu.clicked span::after {
+	-webkit-transform: translateY(-9px) rotate(-45deg);
+	-moz-transform: translateY(-9px) rotate(-45deg);
+	-ms-transform: translateY(-9px) rotate(-45deg);
+	-o-transform: translateY(-9px) rotate(-45deg);
+	transform: translateY(-9px) rotate(-45deg);
+}
+.menu.clicked span:before, .menu.clicked span:after {
+	background-color: #ffffff;
+}
+.menu:hover {
+	cursor: pointer;
+}
+/*  NAV
+========================================== */
+
+#nav {
+	background: #211316;
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	right: 0;
+	height: 100%;
+	max-width: 250px;
+	width: 100%;
+	padding: 100px 40px 60px 40px;
+	overflow-y: auto;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-moz-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-o-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+#nav.show {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+}
+#nav.show ul.main li {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
+.menu.clicked {
+    position: fixed;
+    z-index: 99;
+}
+#nav.show ul.main li:nth-child(1) {
+	transition-delay: 0.15s;
+}
+#nav.show ul.main li:nth-child(2) {
+	transition-delay: 0.3s;
+}
+#nav.show ul.main li:nth-child(3) {
+	transition-delay: 0.45s;
+}
+#nav.show ul.main li:nth-child(4) {
+	transition-delay: 0.6s;
+}
+#nav.show ul.main li:nth-child(5) {
+	transition-delay: 0.75s;
+}
+#nav.show ul.main li:nth-child(6) {
+	transition-delay: 0.9s;
+}
+#nav.show ul.main li:nth-child(7) {
+	transition-delay: 1.05s;
+}
+#nav.show ul.main li:nth-child(8) {
+	transition-delay: 1.2s;
+}
+#nav.show ul.main li:nth-child(9) {
+	transition-delay: 1.35s;
+}
+#nav.show .about, #nav.show .social, #nav.show ul.sub {
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	opacity: 1;
+	transition-delay: .85s;
+}
+
+@media (min-width: 667px) {
+#nav {
+	padding: 120px 30px 70px 20px;
+}
+}
+#nav ul.main {
+	list-style-type: none;
+}
+#nav ul.main li {
+	-webkit-transform: translateX(40px);
+	-moz-transform: translateX(40px);
+	-ms-transform: translateX(40px);
+	-o-transform: translateX(40px);
+	transform: translateX(40px);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	float: none;
+	    list-style: circle;
+    color: #fff
+}
+#nav ul.main li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.main li a {
+	color: #ffffff;
+	
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1rem;
+	display: block;
+	padding: 10px 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.main li a span {
+	color: #b7ac7f;
+}
+#nav ul.main li a:hover {
+	color: #b7ac7f;
+}
+#nav ul.sub {
+	list-style-type: none;
+	margin-top: 40px;
+	-webkit-transform: translateY(30px);
+	-moz-transform: translateY(30px);
+	-ms-transform: translateY(30px);
+	-o-transform: translateY(30px);
+	transform: translateY(30px);
+	opacity: 0;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+#nav ul.sub li {
+	margin-bottom: 10px;
+}
+#nav ul.sub li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.sub li a {
+	color: #ffffff;
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 1px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.sub li a:hover {
+	color: #b7ac7f;
+}
+.menu:hover span{}
+
+/*  OVERLAY
+========================================== */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #603e82;
+	opacity: 0;
+	visibility: hidden;
+}
+.overlay.show {
+	opacity: 0.8;
+	visibility: visible;
+}    
+  
+/*footer*/
+ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+.footer_area {
+	padding:60px 0 20px;
+	position: relative;
+	color: #fff;
+	z-index: 100;
+	background: #222;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.single_ftr form{
+	margin-top: 8px;
+}
+.single_ftr p{
+	margin-bottom: 10px;
+}
+
+.sf_title{
+    color: #33d286;
+    text-transform: uppercase;
+    font-size: 17px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+.ftr_logo {
+    float: left;
+    padding: 15px 46px 0 0;
+}
+.ftr_logo a img {
+    transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+}
+.ftr_logo a:hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+.newsletter_form form{
+	position: relative;
+	display: block;
+}
+.newsletter_form {
+	margin-top: 0px;
+	overflow: hidden;
+}
+.single_ftr p{
+	display: inline-block;
+}
+.newsletter_form .form-control {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 8px 20px;
+    width: 100%;
+	position: relative;
+	background: transparent;
+	color: #fff;
+	border-radius: 0;
+}
+
+.newsletter_form button {
+	border: inherit;
+	border-radius: 0;
+	background: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: none;
+	border: 1px solid transparent;
+	transition: 0.5s;
+	letter-spacing: 0.5px;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	padding: 12px 17px;
+	transition: .5s;
+}
+.newsletter_form button:hover,
+.newsletter_form button:hover{
+	background: transparent;
+	color: #33d286;
+	opacity: .9;
+}
+.newsletter_form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    opacity: 1
+}
+
+.newsletter_form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: 1
+}
+.form-control{
+
+}
+.form-control:focus{
+	border-color: #33d286;
+}
+
+.single_ftr li {
+    padding-bottom: 7px;
+    color: #fff;
+}
+.single_ftr a {
+    color: #fff;
+}
+.single_ftr a:hover {
+    color: #33d286;
+}
+
+.ftr_social_icon li {
+	display: inline-block;
+	text-align: center;
+	padding: 4px;
+}
+
+
+.ftr_social_icon ul li a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 17px;
+    height: 40px;
+    line-height: 32px;
+    padding: 4px 8px;
+    width: 40px;
+	transition: .5s;
+}
+.ftr_social_icon ul li a:hover{
+	background: #33d286;
+	border-color: #33d286;
+	color: #fff;
+}
+
+.ftr_btm_area {
+	background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px dotted #888;
+	margin-top: 28px;
+	z-index: 100;
+	position: relative;
+}
+.copyright_text{
+    margin: 6px 0;
+}
+.payment_mthd_icon li {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 30px;
+	color: #fff;
+}
+
+/*starting*/
+@-webkit-keyframes fake {
+  from {
+    opacity: 1;
+  }
+  to {
+    opactity: 1;
+  }
+}
+@keyframes fake {
+  from {
+    opacity: 1;
+  }
+  to {
+    opactity: 1;
+  }
+}
+
+
+.worko-tabs {
+  margin: 20px;
+  width: 100
+}
+.worko-tabs .state {
+  position: absolute;
+  left: -10000px;
+}
+.worko-tabs .flex-tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.worko-tabs .flex-tabs .tab {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-height: 40px;
+}
+.worko-tabs .flex-tabs .panel {
+  background-color:  
+#fff;
+  padding: 20px;
+  min-height: 300px;
+  display: none;
+  width: 100%;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+}
+.worko-tabs .tab {
+  display: inline-block;
+  padding: 10px;
+  vertical-align: top;
+  background-color: #fff;
+  cursor: hand;
+  cursor: pointer;
+  border-left: 10px solid #ccc;
+}
+.worko-tabs .tab:hover {
+  background-color: #f0f4fe;
+}
+
+#tab-one:checked ~ .tabs #tab-one-label,
+#tab-two:checked ~ .tabs #tab-two-label,
+#tab-three:checked ~ .tabs #tab-three-label,
+#tab-four:checked ~ .tabs #tab-four-label {
+  background-color:  
+#f0f4fe;
+  cursor: default;
+  border-left-color: #69be28;
+}
+
+#tab-one:checked ~ .tabs #tab-one-panel,
+#tab-two:checked ~ .tabs #tab-two-panel,
+#tab-three:checked ~ .tabs #tab-three-panel,
+#tab-four:checked ~ .tabs #tab-four-panel {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .flex-tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .flex-tabs .tab {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  .flex-tabs .tab:last-of-type {
+    border-bottom: none;
+  }
+  .flex-tabs #tab-one-label {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .flex-tabs #tab-two-label {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .flex-tabs #tab-three-label {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .flex-tabs #tab-four-label {
+    -webkit-box-ordinal-group: 8;
+    -webkit-order: 7;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  .flex-tabs #tab-one-panel {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .flex-tabs #tab-two-panel {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .flex-tabs #tab-three-panel {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .flex-tabs #tab-four-panel {
+    -webkit-box-ordinal-group: 9;
+    -webkit-order: 8;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+
+  #tab-one:checked ~ .tabs #tab-one-label,
+  #tab-two:checked ~ .tabs #tab-two-label,
+  #tab-three:checked ~ .tabs #tab-three-label,
+  #tab-four:checked ~ .tabs #tab-four-label {
+    border-bottom: none;
+  }
+
+  #tab-one:checked ~ .tabs #tab-one-panel,
+  #tab-two:checked ~ .tabs #tab-two-panel,
+  #tab-three:checked ~ .tabs #tab-three-panel,
+  #tab-four:checked ~ .tabs #tab-four-panel {
+    border-bottom: 1px solid #ccc;
+  }
+}
+img {
+  margin-left: 50px;
+}
+p {
+  font-family: verdana;
+}
+h2 {
+  font-family: verdana;
+}
+marquee {
+  font-family: verdana;
+}
+h3 {
+  font-family: verdana;
+}
+.map {
+  float: right;
+  border: solid 2px #000;
+  margin-right: 100px;
+}
+
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Gradient text only on Webkit */
+.warning {
+  background: -webkit-linear-gradient(45deg,  #c97874 10%, #463042 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #8c5059;
+  font-weight: 400;
+  margin: 0 auto 6em;
+  max-width: 9em;
+}
+
+.calculator {
+  font-size: 28px;
+  margin: 0 auto;
+  width: 10em;
+  
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+  
+  &::after {
+    clear: both;
+  }
+}
+.info {
+  font-family: monospace;
+  position: absolute;
+  line-height: 20px;
+  font-size: 14px;
+  left: 20px;
+  top: 20px;
+}
+img {
+    display: block;
+    height: 190px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  float: center;
+}
+/*top*/
+.icon-left{
+    float:left;
+    padding: 12px 25px 60px 15px;
+    color:#4ECABE;
+}
+.text{
+    text-align:left;
+    padding:0 0 0 15px;
+}
+.text h4{
+    padding-bottom:5px;
+}
+img{
+   width:100%; 
+   height:75vh;
+   float:left;
+}
+
+/*tstinomial*/
+
+.carousel-item{min-height:300px; background:#ccc; }
+    
+/*table*/
+
+.bs-example{
+    	margin: 20px;
+    }
+
+
+
+ </style>
+  </head>
+  <body>
+    <div class="menu"> <span></span> </div>
+<nav id="nav">
+		<ul class="main">
+				<li><a target="_blank" href="main.html">HOME</a></li>
+				<li><a target="_blank" href="contact.html">OUR TEAM</a></li>
+				<li><a href="2020.html">2020</a></li>
+				<li><a href="2021.html">2021(REGISTER)</a></li>
+				<li><a target="_blank" href="Our Gallery.html">GALLERY</a></li>
+				<li><a target="_blank" href="coming.html">NEXT EVENT</a></li>
+		</ul>
+</nav>
+<div class="overlay"></div> 
+
+<div class ="jumbotron">
+<center>
+  <h1 class="red">
+IT IS NICE TO HAVE VALID COMPETITION IT PUSHES YOU TO DO BETTER.
+</h1></center>
+
+<div class="worko-tabs">
+  <input class="state" type="radio" title="tab-one" name="tabs-state" id="tab-one" checked />
+  <input class="state" type="radio" title="tab-two" name="tabs-state" id="tab-two" />
+  <input class="state" type="radio" title="tab-three" name="tabs-state" id="tab-three" />
+ <input class="state" type="radio" title="tab-four" name="tabs-state" id="tab-four" />
+  <div class="tabs flex-tabs">
+  </div>
+</div>
+</div>
+   
+<div class="container">
+    <div class="row">
+        <h1 class="title col-lg-12 col-md-12">CONGRATULATIONS</h1><br>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+           
+       <img src="winner1.png" alt="">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="icon-left">
+                <i class="fa fa-camera fa-3x"></i>
+            </div>
+            <div class="text">
+            <h4> How we Start </h4>
+               <p>The idea of to start competition during the corona pandemic to make them utilization of their time to showing the skills.
+               .</p> 
+            </div><br>
+             <div class="icon-left">
+                <i class="fa fa-taxi fa-3x"></i>
+            </div>
+            <div class="text">
+            <h4> Previous Domain </h4>
+               <p>Last year There were three domains in chitralekh pratiyogita i.e photography, Videography and writing. 
+All the creative works were posted in our Instagram page.
+               </p> 
+            </div><br>
+             <div class="icon-left">
+                <i class="fa fa-leaf fa-3x"></i>
+            </div>
+            <div class="text">
+            <h4> Reviews </h4>
+               <p> They got a great platform to showcase our talents even in those lockdown days. Such competitions encourages as well as motivates to find the hidden talent inside them.
+               </p> 
+            </div><br>
+               <div class="icon-left">
+                <i class="fa fa-money fa-3x"></i>
+            </div>
+            <div class="text">
+            <h4> Result Declaration </h4>
+               <p>The result declare on the basis of audience vote on the last date of competition and get certified.
+               </p> 
+            </div>
+
+            </div>
+        </div>
+	</div>
+
+<div class="container">
+    
+    <center><strong><h3>Congrats to all the Winner 2020</h3></strong></center>
+</div>
+
+<div class="bs-example">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Domain</th>
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-primary">
+                <td>1st</td>
+                <td>Ashee and Swarnika</td>
+                <td>Photography</td>
+               
+            </tr>
+            <tr class="table-secondary">
+                <td>2nd</td>
+                <td>Neha Pal</td>
+                <td>Photography</td>
+              
+            </tr>
+            <tr class="table-success">
+                <td>3rd</td>
+                <td>Saloni Manjhi</td>
+                <td>Photography</td>
+              
+            </tr>
+            
+       
+            <tr class="table-info">
+                <td>1st</td>
+                <td>Abhishek Chatterji</td>
+                <td>Writing</td>
+               
+            </tr>
+            <tr class="table-warning">
+                <td>2nd</td>
+                <td>Akshat Bansal</td>
+                <td>Writing</td>
+             
+            </tr>
+            <tr class="table-danger">
+                <td>3rd</td>
+                <td>Aditya Kumar</td>
+                <td>Writing</td>
+              
+            </tr>
+            <tr class="table-active">
+                <td>1st</td>
+                <td>Akshat Bansal</td>
+                <td>Videography</td>
+              
+            </tr>            
+            <tr class="table-light">
+                <td>2nd</td>
+                <td>Akshat Saxena</td>
+                <td>Videography</td>
+              
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+ 
+<div class="container">
+    
+    <hr>
+	<div class="row">
+<aside class="col-md-6">
+    	    <p>Some of their Review</p>
+<!-- ================== 1-carousel bootstrap  ==================  -->
+<div id="carousel1_indicator" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel1_indicator" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel1_indicator" data-slide-to="1"></li>
+    <li data-target="#carousel1_indicator" data-slide-to="2"></li>
+  </ol>  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="win1a.jpeg" alt="First slide"> 
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="win2.jpeg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="pic4.jpeg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carousel1_indicator" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel1_indicator" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> 
+<!-- ==================  1-carousel bootstrap ==================  .// -->		
+	</aside> <!-- col.// -->
+	<aside class="col-md-6">
+	    <p>Some of their Clicks and Writing</p>
+<!-- 2-carousel bootstrap -->
+<div id="carousel2_indicator" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="pic1.jpeg" alt="First slide">
+      <article class="carousel-caption d-none d-md-block">
+	    <h5>Akshat Bansal</h5>
+	  
+	  </article> <!-- carousel-caption .// -->
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="pic2.jpeg" alt="Second slide">
+      <article class="carousel-caption d-none d-md-block">
+	    <h5>Neha Pal</h5>
+	  
+	  </article> <!-- carousel-caption .// -->
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="pic3.jpeg" alt="Third slide">
+      <article class="carousel-caption d-none d-md-block">
+	    <h5>Akshat saxena</h5>
+	    
+	  </article> <!-- carousel-caption .// -->
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carousel2_indicator" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel2_indicator" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> 
+<!-- ==================  2-carousel bootstrap.// ==================  -->	
+	</aside>
+	</div>
+</div>
+
+
+<br>
+<br>
+      
+     <footer class="footer_area">
+			<div class="container">
+				<div class="row">				
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Connect with Professional</h4>
+							<ul>
+                                                            <li> <a href="contat.html">Club Coordinator</a></li>
+								<li><a href="contat.html">Developer</a></li>
+                                                                <li><a href="contat.html">Designer</a></li>
+                                                                <li><a href="contat.html">Content Creator</a></li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Information</h4>
+							<ul>
+								<li><a href="#services">About Us</a></li>
+								<li><a href="#">What we do</a></li>
+								<li><a href="#">Gallery</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Competition</h4>
+							<ul>
+								<li><a href="#">Photography</a></li>
+								<li><a href="#">Videography</a></li>
+								<li><a href="#">Writing</a></li>
+								<li><a href="#">Art</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->	
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Contact Us</h4>
+							<div class="newsletter_form">
+								<p>Email:- chitralekh2021@gmail.com</p>
+								
+							</div>
+						</div>
+					</div> <!--  End Col -->
+					
+				</div>
+			</div>
+	
+		
+			<div class="ftr_btm_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="ftr_social_icon">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com/chitralekh_/"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<p class="copyright_text text-center">© 2021 Beta Version</p>
+						</div>
+						
+						<div class="col-sm-4">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+      
+      <script>
+        $('.menu, .overlay').click(function () {
+	$('.menu').toggleClass('clicked');
+	
+	$('#nav').toggleClass('show');
+	
+});  
+          
+      </script>
+      
+      <script>
+ 
+          
+      </script>
+      
+  </body>
+</html>

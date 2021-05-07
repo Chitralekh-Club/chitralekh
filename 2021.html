@@ -1,0 +1,2096 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="intro.css">
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+    <title>Chitralekh Club</title>
+    <style>
+     
+        /*nav*/
+    .menu {
+	    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 21;
+    right: 1%;
+}
+.menu span {
+	position: relative;
+	margin-top: 9px;
+	margin-bottom: 9px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -1.5px;
+}
+.menu span, .menu span::before, .menu span::after {
+	display: block;
+	
+		width: 26px;
+	right: 0;
+	height: 3px;
+	background-color: #fccb32;
+	outline: 1px solid transparent;
+	-webkit-transition-property: background-color, -webkit-transform;
+	-moz-transition-property: background-color, -moz-transform;
+	-o-transition-property: background-color, -o-transform;
+	transition-property: background-color, transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.menu span::before, .menu span::after {
+	position: absolute;
+	content: "";
+}
+.menu span::before {
+	top: -9px;
+	 width:20px
+}
+.menu span::after {
+	top: 9px;width: 33px;
+
+}
+.menu.clicked span {
+	background-color: transparent;
+}
+.menu.clicked span::before {
+	-webkit-transform: translateY(9px) rotate(45deg);
+	-moz-transform: translateY(9px) rotate(45deg);
+	-ms-transform: translateY(9px) rotate(45deg);
+	-o-transform: translateY(9px) rotate(45deg);
+	transform: translateY(9px) rotate(45deg);    width: 33px;
+}
+.menu.clicked span::after {
+	-webkit-transform: translateY(-9px) rotate(-45deg);
+	-moz-transform: translateY(-9px) rotate(-45deg);
+	-ms-transform: translateY(-9px) rotate(-45deg);
+	-o-transform: translateY(-9px) rotate(-45deg);
+	transform: translateY(-9px) rotate(-45deg);
+}
+.menu.clicked span:before, .menu.clicked span:after {
+	background-color: #ffffff;
+}
+.menu:hover {
+	cursor: pointer;
+}
+/*  NAV
+========================================== */
+
+#nav {
+	background: #211316;
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	right: 0;
+	height: 100%;
+	max-width: 250px;
+	width: 100%;
+	padding: 100px 40px 60px 40px;
+	overflow-y: auto;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-moz-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-o-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+#nav.show {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+}
+#nav.show ul.main li {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
+.menu.clicked {
+    position: fixed;
+    z-index: 99;
+}
+#nav.show ul.main li:nth-child(1) {
+	transition-delay: 0.15s;
+}
+#nav.show ul.main li:nth-child(2) {
+	transition-delay: 0.3s;
+}
+#nav.show ul.main li:nth-child(3) {
+	transition-delay: 0.45s;
+}
+#nav.show ul.main li:nth-child(4) {
+	transition-delay: 0.6s;
+}
+#nav.show ul.main li:nth-child(5) {
+	transition-delay: 0.75s;
+}
+#nav.show ul.main li:nth-child(6) {
+	transition-delay: 0.9s;
+}
+#nav.show ul.main li:nth-child(7) {
+	transition-delay: 1.05s;
+}
+#nav.show ul.main li:nth-child(8) {
+	transition-delay: 1.2s;
+}
+#nav.show ul.main li:nth-child(9) {
+	transition-delay: 1.35s;
+}
+#nav.show .about, #nav.show .social, #nav.show ul.sub {
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	opacity: 1;
+	transition-delay: .85s;
+}
+
+@media (min-width: 667px) {
+#nav {
+	padding: 120px 30px 70px 20px;
+}
+}
+#nav ul.main {
+	list-style-type: none;
+}
+#nav ul.main li {
+	-webkit-transform: translateX(40px);
+	-moz-transform: translateX(40px);
+	-ms-transform: translateX(40px);
+	-o-transform: translateX(40px);
+	transform: translateX(40px);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	float: none;
+	    list-style: circle;
+    color: #fff
+}
+#nav ul.main li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.main li a {
+	color: #ffffff;
+	
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1rem;
+	display: block;
+	padding: 10px 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.main li a span {
+	color: #b7ac7f;
+}
+#nav ul.main li a:hover {
+	color: #b7ac7f;
+}
+#nav ul.sub {
+	list-style-type: none;
+	margin-top: 40px;
+	-webkit-transform: translateY(30px);
+	-moz-transform: translateY(30px);
+	-ms-transform: translateY(30px);
+	-o-transform: translateY(30px);
+	transform: translateY(30px);
+	opacity: 0;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+#nav ul.sub li {
+	margin-bottom: 10px;
+}
+#nav ul.sub li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.sub li a {
+	color: #ffffff;
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 1px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.sub li a:hover {
+	color: #b7ac7f;
+}
+.menu:hover span{}
+
+/*  OVERLAY
+========================================== */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #603e82;
+	opacity: 0;
+	visibility: hidden;
+}
+.overlay.show {
+	opacity: 0.8;
+	visibility: visible;
+}    
+  
+/*footer*/
+ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+.footer_area {
+	padding:60px 0 20px;
+	position: relative;
+	color: #fff;
+	z-index: 100;
+	background: #222;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.single_ftr form{
+	margin-top: 8px;
+}
+.single_ftr p{
+	margin-bottom: 10px;
+}
+
+.sf_title{
+    color: #33d286;
+    text-transform: uppercase;
+    font-size: 17px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+.ftr_logo {
+    float: left;
+    padding: 15px 46px 0 0;
+}
+.ftr_logo a img {
+    transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+}
+.ftr_logo a:hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+.newsletter_form form{
+	position: relative;
+	display: block;
+}
+.newsletter_form {
+	margin-top: 0px;
+	overflow: hidden;
+}
+.single_ftr p{
+	display: inline-block;
+}
+.newsletter_form .form-control {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 8px 20px;
+    width: 100%;
+	position: relative;
+	background: transparent;
+	color: #fff;
+	border-radius: 0;
+}
+
+.newsletter_form button {
+	border: inherit;
+	border-radius: 0;
+	background: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: none;
+	border: 1px solid transparent;
+	transition: 0.5s;
+	letter-spacing: 0.5px;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	padding: 12px 17px;
+	transition: .5s;
+}
+.newsletter_form button:hover,
+.newsletter_form button:hover{
+	background: transparent;
+	color: #33d286;
+	opacity: .9;
+}
+.newsletter_form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    opacity: 1
+}
+
+.newsletter_form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: 1
+}
+.form-control{
+
+}
+.form-control:focus{
+	border-color: #33d286;
+}
+
+.single_ftr li {
+    padding-bottom: 7px;
+    color: #fff;
+}
+.single_ftr a {
+    color: #fff;
+}
+.single_ftr a:hover {
+    color: #33d286;
+}
+
+.ftr_social_icon li {
+	display: inline-block;
+	text-align: center;
+	padding: 4px;
+}
+
+
+.ftr_social_icon ul li a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 17px;
+    height: 40px;
+    line-height: 32px;
+    padding: 4px 8px;
+    width: 40px;
+	transition: .5s;
+}
+.ftr_social_icon ul li a:hover{
+	background: #33d286;
+	border-color: #33d286;
+	color: #fff;
+}
+
+.ftr_btm_area {
+	background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px dotted #888;
+	margin-top: 28px;
+	z-index: 100;
+	position: relative;
+}
+.copyright_text{
+    margin: 6px 0;
+}
+.payment_mthd_icon li {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 30px;
+	color: #fff;
+}
+/*slide*/
+#slider-animation{max-height:440px;}
+.heading-box h2{ width:100%; color: red; }
+h2, p{color:#fff;}
+.carousel-item img{width:100%;}
+.text-box {
+	position: absolute;
+	top: 70%;
+	left: 15%;
+	right: 15%;
+	color: #000;
+	transform: translateY(-50%);
+}
+/*circle*/
+/*swiper */
+
+  
+  /* circle */
+ 
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+.img-responsive {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.rotateframe {
+  /*    padding: 15px*/
+  
+  margin: 70px 0
+}
+
+ul.overview li a {
+  width: 300px;
+  height: 300px;
+}
+
+#rotatescroll {
+  position: relative;
+  border: 5px solid #40bf97;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+  max-height: 300px;
+  max-width: 300px;
+  background-color: #f5f5f5;
+  
+  user-select: none;
+ 
+}
+
+.viewport {
+  max-height: 300px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 300px;
+  border: 2px solid #40bf97;
+  background-color: #ccc;
+  border-radius: 100%;
+  z-index: 0;
+}
+
+#rotatescroll .overview {
+  position: relative;
+  width: 798px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+
+#rotatescroll .overview li {
+  max-height: 300px;
+  max-width: 300px;
+  float: left;
+  position: relative;
+  border-radius: 50%;
+}
+
+.thumb {
+  background: #ffffff;
+  border: 2px solid #40bf97;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  cursor: pointer;
+  left: 137px;
+  width: 24px;
+  z-index: 2000;
+  height: 24px;
+}
+
+.dot {
+  left: inherit !important;
+  top: 0 !important;
+  z-index: 100;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+
+.dot:after {
+  content: '';
+  border-left: 1px solid #40bf97;
+  display: table-cell;
+  height: 42px;
+  left: 0;
+  position: absolute;
+}
+
+.text {
+  padding-top: 15px;
+}
+
+.flip.text span {
+  top: 5px;
+}
+
+.active .flip.text span {
+  top: 18px !important;
+}
+
+.active h1 div.text {
+  background-color: #26d9a0;
+  color: #fff;
+  padding: 15px;
+  height: 8px !important;
+}
+
+.active .curve {
+  position: relative;
+  top: -12px;
+  width: 178px;
+  height: 25px;
+  border: solid 18px #40bf97;
+  border-color: #40bf97 transparent transparent transparent;
+  padding: 0;
+  border-radius: 50%/58px 58px 0 0;
+  margin: 0 auto;
+}
+
+.active .flip-curve.curve {
+  top: -14px !important;
+}
+
+h1 span {
+  line-height: 0.65;
+  white-space: pre;
+  overflow: visible;
+  padding: 0px;
+}
+
+.flip {
+  transform: rotate(180deg)
+}
+
+.dot h1 {
+  position: absolute;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  text-align: center;
+  transform: skewY(45deg) rotate(22.5deg);
+  font-family: Corbel, "Segoe Ui", "Trebuchet Ms", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.dot:first-child {
+  transform: rotate(337.5deg) skewY(-45deg);
+}
+
+.dot:nth-child(2) {
+  transform: rotate(22.5deg) skewY(-45deg);
+}
+
+.dot:nth-child(3) {
+  transform: rotate(67.5deg) skewY(-45deg);
+}
+
+.dot:nth-child(4) {
+  transform: rotate(112.5deg) skewY(-45deg);
+}
+
+.dot:nth-child(5) {
+  transform: rotate(157.5deg) skewY(-45deg);
+}
+
+.dot:nth-child(6) {
+  transform: rotate(202.5deg) skewY(-45deg);
+}
+
+.dot:nth-child(7) {
+  transform: rotate(247.5deg) skewY(-45deg);
+}
+
+.dot:nth-child(8) {
+  transform: rotate(292.5deg) skewY(-45deg);
+}
+/*competition*/
+.color-list {
+  display: flex;
+  /* 
+    On small displays we want each .color stacked.
+    Flexbox let's us determine stacking direction via
+    flex-direction: column;
+  */
+  flex-direction: column;
+  height: 100vh;
+}
+
+.color {
+  /*
+    Each .color is also a flex item. We do this so that we have reasonable
+    distribution of space between elements. We use flex-direction so that
+    flexbox knows which way to position each element (in this case, vertical).
+  */
+  display: flex;
+  flex-direction: column;
+  
+  /*
+    .color can grow but not shrink (we want space for first three elements).
+    10em is enough space to see name, hsl, and hex values. 
+    Try shrinking vertically on a small display.
+  */
+  flex: 1 0 10em;  
+  box-shadow: 0 0 30px #424242;
+  
+  /* Handles any clipping/overflow issues on transition */
+  overflow: hidden;
+  padding: 1em;
+  color: white;
+  transition: flex-basis 500ms ease-in-out;
+}
+
+.color:hover {
+  /*
+    Change the flex-basis so that we know what
+    size to transition to on hover. Arbitrary,
+    based on our design/content.
+  */
+  flex-basis: 20em;
+}
+
+.color:hover .details {
+  opacity: 1;
+}
+
+.name {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.details li {
+  font-size: 1em;
+  line-height: 2em;
+}
+
+@media (min-width: 600px) {
+  .color-list {
+    /*
+      Change the direction so that each .color
+      aligns horizontally
+    */
+    flex-direction: row;
+  }
+  
+  .color {
+    /*
+      No scrollbars on mobile
+    */
+    flex-shrink: 1;
+  }
+}
+
+/* Fonts, OK at the end for this demo! */
+/*FAQ*/
+#panel-title {
+  color: crimson;
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+  padding: 10px 0px;
+}
+
+
+#panel {
+  padding: 10px 25px;
+}
+
+.panel-tab {
+	margin: 40px auto;
+	box-shadow: 0px 2px 3px 1px rgba(50,50,50,0.3);
+}
+
+.panel-toggle {
+  color: whitesmoke;
+	background-color: crimson;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+}
+
+.panel-title {
+  font-size: 24px;
+  margin: 0px;
+}
+
+.panel-content {
+  color: grey;
+  display: none;
+  padding: 20px 25px;
+	border: 1px solid rgba(50,50,50,0.3);
+}
+
+ </style>
+  </head>
+  <body>
+    <div class="menu"> <span></span> </div>
+<nav id="nav">
+		<ul class="main">
+				<li><a target="_blank" href="main.html">HOME</a></li>
+				<li><a target="_blank" href="contact.html">OUR TEAM</a></li>
+				<li><a href="2020.html">2020</a></li>
+				<li><a href="2021.html">2021(REGISTER)</a></li>
+				<li><a target="_blank" href="Our Gallery.html">GALLERY</a></li>
+				<li><a target="_blank" href="coming.html">NEXT EVENT</a></li>
+		</ul>
+</nav>
+<div class="overlay"></div> 
+
+
+<section>
+    <div id="slider-animation" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+ 
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="bg1.jpg" alt="Los Angeles">
+ <div class="text-box">
+            <div class="row align-items-center">
+                   
+            <div class="col-md-6">
+                <h2 class="wow fadeInUp" data-wow-duration="4s">Build your Skill</h2>
+            <p class="wow fadeInUp" data-wow-duration="2s">As you know, now a days skill is more important than anything and here is "Chitralekh 2021" show your self styled skill </p>
+            </div>
+            <div class="col-md-6 wow slideInLeft" data-wow-duration="4s">
+               <img src="car1.png">
+           
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+        <img src="bg9.jpg" alt="Los Angeles">
+ <div class="text-box">
+            <div class="row align-items-center">
+                   
+            <div class="col-md-6">
+                <h2 class="wow fadeInUp" data-wow-duration="4s">Build your Skill</h2>
+            <p class="wow fadeInUp" data-wow-duration="2s">As you know, now a days skill is more important than anything and here is "Chitralekh 2021" show your self styled skill </p>
+            </div>
+            <div class="col-md-6 wow slideInLeft" data-wow-duration="4s">
+               <img src="car1.png">
+           
+        </div>
+        </div>
+    </div>
+    </div>
+     <div class="carousel-item">
+        <img src="bg7.jpg" alt="Los Angeles">
+ <div class="text-box">
+            <div class="row align-items-center">
+                   
+            <div class="col-md-6">
+                <h2 class="wow fadeInUp" data-wow-duration="4s"> Get Prizes </h2>
+            <p class="wow fadeInUp" data-wow-duration="2s">As you know, now a days skill is more important than anything and here is "Chitralekh 2021" show your self styled skill </p>
+            </div>
+            <div class="col-md-6 wow slideInLeft" data-wow-duration="4s">
+               <img src="car1.png">
+           
+        </div>
+        </div>
+    </div>
+    </div>
+  
+</div>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#slider-animation" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#slider-animation" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+    
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+<div class="rotateframe">
+  <div id="rotatescroll">
+    <div class="viewport">
+      <ul class="overview">
+        <li>
+          <a href="javascript:void()"><img class="img-responsive" src="//placehold.it/300/ffffff/4240bf/" /></a>
+        </li>
+        <li>
+          <a href="javascript:void()"><img class="img-responsive" src="//placehold.it/300/4240bf/ffffff" /></a>
+        </li>
+        <li>
+          <a href="javascript:void()"><img class="img-responsive" src="//placehold.it/300/ffffff/4068bf/" /></a>
+        </li>
+        <li>
+          <a href="javascript:void()"><img class="img-responsive" src="//placehold.it/300/4068bf/ffffff" /></a>
+        </li>
+        <li>
+          <a href="javascript:void()"><img class="img-responsive" src="//placehold.it/300/ffffff/4093bf/" /></a>
+        </li>
+        <li>
+          <a href="javascript:void()"><img class="img-responsive" src="//placehold.it/300/4093bf/ffffff" /></a>
+        </li>
+        <li>
+          <a href="javascript:void()"><img class="img-responsive" src="//placehold.it/300/ffffff/40bdbf/" /></a>
+        </li>
+        <li>
+          <a href="javascript:void()"><img class="img-responsive" src="//placehold.it/300/40bdbf/ffffff" /></a>
+        </li>
+
+      </ul>
+
+    </div>
+    <div class="thumb"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="color-list">
+ 
+  <section class="color" style="background: hsl(4,99%,66%);">
+    <h2 class="name">VIDEOGRAPHY DOMAIN</h2>
+    <ul class="details">
+      <li>Only 30 Sec Video would be taken.</li>
+      <li>Your Own Edited Video will be accepted.</li>
+      <li>Template can be use.</li>
+      <li>Submit your video in mp4, avi, mov, mts only.</li>
+      <li>Submit your video with your name and suitable caption.</li>
+    </ul>
+  </section>
+
+  <section class="color" style="background: hsl(233,21%,56%);">
+    <h2 class="name">PHOTOGRAPHY DOMAIN</h2>
+    <ul class="details">
+      <li>For Photography the theme is YOUR BEST SHOT.</li>
+      <li>Photo Manipulation is not allowed.</li>
+      <li>Some Basic Editing is allowed.</li>
+      <li>Participants have to send both original and Edited one</li>
+      <li>The Size of Photo should be greater than 3MB.</li>
+      <li>Submit your photo with your name and suitable caption. </li>
+      <li>No Watermark</li>
+      <li>Should be submitted only jpg, jpeg and png extension only.</li>
+    </ul>
+  </section>
+  
+  <section class="color" style="background: hsl(357,26%,42%);">
+    <h2 class="name">WRITING DOMAIN</h2>
+    <ul class="details">
+      <li>Upload only your orginal work.</li>
+      <li>Writing can be accepted both digital and manual.</li>
+      <li>For Manual Writing paper should be used only A4 Size.</li>
+      <li>For Digital Writing you can submit using docx, docm, dot, dotx extension only.</li>
+     
+      <li>Short Story - 150 to 200 words.</li>
+      <li>Poetry - 80 words. </li>
+      <li>Quote - 30 to 40 words. </li>
+      
+    </ul>
+  </section>
+  <section class="color" style="background: hsl(144,33%,68%);">
+    <h2 class="name">ART DOMAIN</h2>
+    <ul class="details">
+      <li>Paper should be used only A3 and A4 size.</li>
+      <li>Accepted art shaded black and white also. </li>
+      <li>No Watermark or Add Mark.</li>
+      <li>Some filter to be used while submitting.</li>
+      
+      <li>Participant have to send both original and filter one. </li>
+      <li>Art should be submit with your name and suitable caption.</li>
+    </ul>
+  </section>
+
+ 
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div id="panel">
+
+		<h2 id=panel-title>
+			<i class="fas fa-question-circle"></i>
+			Frequently Asked Questions
+		</h2>
+		
+		<!-- Tab #1 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title"> Question 1</h2>
+				<i class="panel-symbol fas fa-plus"></i>
+			</div>
+			<div class="panel-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora doloribus, neque optio consequatur. Iste, ad voluptas architecto, at quis vitae nobis, delectus, quaerat tempore atque quibusdam temporibus repudiandae recusandae id.</p>
+			</div>
+		</div>
+		
+		<!-- Tab #2 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title">Question 2</h2>
+				<i class="panel-symbol fas fa-plus"></i>
+			</div>
+			<div class="panel-content">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos officia atque vero modi saepe dolore sapiente ullam minus consequuntur reprehenderit culpa dolorum odio blanditiis maiores maxime quisquam, illum cupiditate voluptas.</p>
+			</div>
+		</div>
+		
+		<!-- Tab #3 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title">Question 3</h2>
+				<i class="panel-symbol fas fa-plus"></i>
+			</div>
+			<div class="panel-content">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eveniet laudantium omnis inventore repellendus quas voluptatibus, ea numquam et quidem dolorem! Magnam, totam voluptas? Quia corporis aperiam eligendi ipsum suscipit.</p>
+			</div>
+		</div>
+		
+		<!-- Tab #4 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title">Question 4</h2>
+				<i class="panel-symbol fas fa-plus"></i>
+			</div>
+			<div class="panel-content">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nam et ut. Explicabo beatae cum, earum ex veniam perferendis aliquam! Rerum ipsam nisi in, quisquam doloribus cum omnis reprehenderit esse.</p>
+			</div>
+		</div>
+		
+		<!-- Tab #5 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title">Question 5</h2>
+				<i class="panel-symbol fas fa-plus"></i>
+			</div>
+			<div class="panel-content">
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque vel obcaecati explicabo laboriosam sequi sit odio est deserunt harum, expedita maiores deleniti animi inventore esse nemo quos. Architecto, eveniet natus!</p>
+			</div>
+		</div>			
+	</div>
+
+    <footer class="footer_area">
+			<div class="container">
+				<div class="row">				
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Connect with Professional</h4>
+							<ul>
+                                                            <li> <a href="contat.html">Club Coordinator</a></li>
+								<li><a href="contat.html">Developer</a></li>
+                                                                <li><a href="contat.html">Designer</a></li>
+                                                                <li><a href="contat.html">Content Creator</a></li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Information</h4>
+							<ul>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">What we do</a></li>
+								<li><a href="#">Gallery</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Competition</h4>
+							<ul>
+								<li><a href="#">Photography</a></li>
+								<li><a href="#">Videography</a></li>
+								<li><a href="#">Writing</a></li>
+								<li><a href="#">Art</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->	
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Contact Us</h4>
+							<div class="newsletter_form">
+								<p>Email:- chitralekh2021@gmail.com</p>
+								
+							</div>
+						</div>
+					</div> <!--  End Col -->
+					
+				</div>
+			</div>
+	
+		
+			<div class="ftr_btm_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="ftr_social_icon">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<p class="copyright_text text-center">© 2021 Beta Version</p>
+						</div>
+						
+						<div class="col-sm-4">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+      
+      
+      <script>
+        $('.menu, .overlay').click(function () {
+	$('.menu').toggleClass('clicked');
+	
+	$('#nav').toggleClass('show');
+	
+});  
+          
+      </script>
+      <script>
+         $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+    nav:true,
+    mouseDrag:false,
+    autoplay:true,
+    animateOut: 'slideOutUp',
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+}); 
+          
+      </script>
+      
+      <script>
+           wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+      
+    
+      </script>
+      
+      <script>
+        ;
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory(require("jquery"));
+  } else {
+    factory(jQuery);
+  }
+}
+(function ($) {
+  var pluginName = "tinycircleslider",
+  defaults = {
+    interval: false,
+    intervalTime: 3500,
+    dotsSnap: false,
+    dotsHide: true,
+    radius: 140,
+    start: 0,
+    slides: []
+  };
+
+  function Plugin($container, options) {
+    /**
+     * The options of the carousel extend with the defaults.
+     *
+     * @property options
+     * @type Object
+     * @default defaults
+     */
+    this.options = $.extend({}, defaults, options);
+
+    /**
+     * @property _defaults
+     * @type Object
+     * @private
+     * @default defaults
+     */
+    this._defaults = defaults;
+
+    /**
+     * @property _name
+     * @type String
+     * @private
+     * @final
+     * @default 'tinycircleslider'
+     */
+    this._name = pluginName;
+
+    var self = this,
+    $viewport = $container.find(".viewport"),
+      $overview = $container.find(".overview"),
+      $slides = $overview.children(),
+        $thumb = $(".thumb"),
+        $dots = $container.find(".dot"),
+          $links = $slides.find("a")
+
+            , containerSize = {
+              width: $container.outerWidth(true),
+              height: $container.outerHeight(true)
+            }, slideSize = {
+              width: $slides.first().outerWidth(true),
+              height: $slides.first().outerHeight(true)
+            }, thumbSize = {
+              width: $thumb.outerWidth(true),
+              height: $thumb.outerHeight(true)
+            }, dotSize = {
+              width: $dots.outerWidth(),
+              height: $dots.outerHeight()
+            }
+
+    , intervalTimer = null, animationTimer = null, touchEvents = 'ontouchstart' in window || 'onmsgesturechange' in window, isTouchEvent = false;
+
+    /**
+     * When dotsSnap is enabled every slide has a corresponding dot.
+     *
+     * @property dots
+     * @type Array
+     * @default []
+     */
+    this.dots = [];
+
+    /**
+     * The index of the current slide.
+     *
+     * @property slideCurrent
+     * @type Number
+     * @default 0
+     */
+    this.slideCurrent = 0;
+
+    /**
+     * The current angle in degrees
+     *
+     * @property angleCurrent
+     * @type Number
+     * @default 0
+     */
+    this.angleCurrent = 0;
+
+    /**
+     * The number of slides the slider is currently aware of.
+     *
+     * @property slidesTotal
+     * @type Number
+     * @default 0
+     */
+    this.slidesTotal = $slides.length;
+
+    /**
+     * If the interval is running the value will be true.
+     *
+     * @property intervalActive
+     * @type Boolean
+     * @default false
+     */
+    this.intervalActive = false;
+
+    /**
+     * @method _initialize
+     * @private
+     */
+    function _initialize() {
+      _setDots();
+
+      $overview
+        .append($slides.first().clone())
+        .css("width", slideSize.width * ($slides.length + 1));
+
+      _setEvents();
+
+      _setCSS(0);
+      self.move(self.options.start, self.options.interval);
+
+      return self;
+    }
+
+    /**
+     * @method _setEvents
+     * @private
+     */
+    function _setEvents() {
+      var eventType = touchEvents ? "touchstart" : "mousedown";
+
+      if (touchEvents) {
+        $container[0].ontouchstart = _startDrag;
+        $container[0].ontouchmove = _drag;
+        $container[0].ontouchend = _endDrag;
+      } else {
+        $thumb.bind(eventType, _startDrag);
+      }
+
+      $container.delegate(".dot", eventType, function (event) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        self.stop();
+        self.move($(this).attr("data-slide-index"));
+
+        return false;
+      });
+    }
+
+    /**
+     * @method _setTimer
+     * @private
+     */
+    function _setTimer(slideFirst) {
+      intervalTimer = setTimeout(function () {
+        self.move(self.slideCurrent + 1, true);
+      }, (slideFirst ? 50 : self.options.intervalTime));
+    }
+
+    /**
+     * @method _toRadians
+     * @private
+     * @param {Number} [degrees]
+     */
+    function _toRadians(degrees) {
+      return degrees * (Math.PI / 180);
+    }
+
+    /**
+     * @method _toDegrees
+     * @private
+     * @param {Number} [radians]
+     */
+    function _toDegrees(radians) {
+      return radians * 180 / Math.PI;
+    }
+
+    /**
+     * @method _setDots
+     * @private
+     */
+    function _setDots() {
+      var docFragment = document.createDocumentFragment();
+
+      $dots.remove();
+
+      $slides.each(function (index, slide) {
+        var $dotClone = null,
+        angle = parseInt($(slide).attr("data-degrees"), 10) || (index * 360 / self.slidesTotal),
+        position = {
+          top: -Math.cos(_toRadians(angle)) * self.options.radius + containerSize.height / 2 - dotSize.height / 2,
+          left: Math.sin(_toRadians(angle)) * self.options.radius + containerSize.width / 2 - dotSize.width / 2
+        };
+
+        if ($dots.length > 0) {
+          $dotClone = $dots.clone();
+          $dotClone
+            .addClass($(slide).attr("data-classname"))
+            .css(position);
+
+          docFragment.appendChild($dotClone[0]);
+        }
+
+        self.dots.push({
+          "angle": angle,
+          "slide": slide,
+          "dot": $dotClone
+        });
+      });
+
+      self.dots.sort(function (dotA, dotB) {
+        return dotA.angle - dotB.angle;
+      });
+
+      $.each(self.dots, function (index, dot) {
+        if ($(dot.dot).length > 0) {
+          if (index === 4) {
+            $(dot.dot)
+              .addClass("dot-" + (index + 1))
+              .attr('data-slide-index', index)
+              .html("<h1><div class='flip text'>" + options.slides[index] + "</div><div class='flip-curve curve'>&nbsp;</div></h1>");
+          } else {
+            $(dot.dot)
+              .addClass("dot-" + (index + 1))
+              .attr('data-slide-index', index)
+              .html("<h1><div class='text'>" + options.slides[index] + "</div><div class='curve'>&nbsp;</div></h1>");
+          }
+        }
+      });
+
+      $container.prepend(docFragment);
+
+      $('h1').each(function (i, text) {
+        if ($(this).find('div').html() === "Deals") {
+          $(this).find('div.text').circleType({
+            radius: 220,
+            dir: -1
+          });
+        } else {
+          $(this).find('div.text').circleType({
+            radius: 220
+          });
+        }
+      });
+
+      $dots = $container.find(".dot");
+    }
+
+    /**
+     * If the interval is stopped start it.
+     *
+     * @method start
+     * @chainable
+     */
+    this.start = function (first) {
+      if (self.options.interval) {
+        self.intervalActive = true;
+
+        _setTimer(first);
+      }
+      return self;
+    };
+
+    /**
+     * If the interval is running stop it.
+     *
+     * @method stop
+     * @chainable
+     */
+    this.stop = function () {
+      self.intervalActive = false;
+
+      clearTimeout(intervalTimer);
+
+      return self;
+    };
+
+    /**
+     * @method _findShortestPath
+     * @private
+     * @param {Number} [angleA]
+     * @param {Number} [angleB]
+     */
+    function _findShortestPath(angleA, angleB) {
+      var angleCW, angleCCW, angleShortest;
+
+      if (angleA > angleB) {
+        angleCW = angleA - angleB;
+        angleCCW = -(angleB + 360 - angleA);
+      } else {
+        angleCW = angleA + 360 - angleB;
+        angleCCW = -(angleB - angleA);
+      }
+
+      angleShortest = angleCW < Math.abs(angleCCW) ? angleCW : angleCCW;
+
+      return [angleShortest, angleCCW, angleCW];
+    }
+
+    /**
+     * @method _findClosestSlide
+     * @private
+     * @param {Number} [angle]
+     */
+    function _findClosestSlide(angle) {
+      var closestDotAngleToAngleCCW = 9999,
+      closestDotAngleToAngleCW = 9999,
+      closestDotAngleToAngle = 9999,
+        closestSlideCCW = 0,
+        closestSlideCW = 0,
+          closestSlide = 0;
+
+      $.each(self.dots, function (index, dot) {
+        var delta = _findShortestPath(dot.angle, angle);
+
+        if (Math.abs(delta[0]) < Math.abs(closestDotAngleToAngle)) {
+          closestDotAngleToAngle = delta[0];
+          closestSlide = index;
+        }
+
+        if (Math.abs(delta[1]) < Math.abs(closestDotAngleToAngleCCW)) {
+          closestDotAngleToAngleCCW = delta[1];
+          closestSlideCCW = index;
+        }
+
+        if (Math.abs(delta[2]) < Math.abs(closestDotAngleToAngleCW)) {
+          closestDotAngleToAngleCW = delta[2];
+          closestSlideCW = index;
+        }
+      });
+
+      return [
+        [closestSlide, closestSlideCCW, closestSlideCW]
+        , [closestDotAngleToAngle, closestDotAngleToAngleCCW, closestDotAngleToAngleCW]
+      ];
+    }
+
+    /**
+     * Move to a specific slide.
+     *
+     * @method move
+     * @chainable
+     * @param {Number} [index] The slide to move to.
+     */
+    this.move = function (index) {
+      var slideIndex = Math.max(0, isNaN(index) ? self.slideCurrent : index);
+
+      if (slideIndex >= self.slidesTotal) {
+        slideIndex = 0;
+      }
+
+      var angleDestination = self.dots[slideIndex] && self.dots[slideIndex].angle,
+      angleDelta = _findShortestPath(angleDestination, self.angleCurrent)[0],
+        angleStep = angleDelta > 0 ? -10 : 10;
+
+      self.slideCurrent = slideIndex;
+      _stepMove(angleStep, angleDelta, 50);
+
+      self.start();
+
+      return self;
+    };
+
+    /**
+     * @method _sanitizeAngle
+     * @private
+     * @param {Number} [degrees]
+     */
+    function _sanitizeAngle(degrees) {
+      return (degrees < 0) ? 360 + (degrees % -360) : degrees % 360;
+    }
+
+    /**
+     * @method _stepMove
+     * @private
+     * @param {Number} [angleStep]
+     * @param {Number} [angleDelta]
+     * @param {Boolean} [stepInterval]
+     */
+    function _stepMove(angleStep, angleDelta, stepInterval) {
+      var angleStepNew = angleStep,
+      endAnimation = false;
+
+      if (Math.abs(angleStep) > Math.abs(angleDelta)) {
+        angleStepNew = -angleDelta;
+        endAnimation = true;
+      } else {
+        animationTimer = setTimeout(function () {
+          _stepMove(angleStepNew, angleDelta + angleStep, stepInterval * 0.9);
+        }, stepInterval);
+      }
+
+      self.angleCurrent = _sanitizeAngle(self.angleCurrent - angleStepNew);
+
+      _setCSS(self.angleCurrent, endAnimation);
+    }
+
+    /**
+     * @method _page
+     * @private
+     * @param {Object} [event]
+     */
+    function _page(event) {
+      return {
+        x: isTouchEvent ? event.targetTouches[0].pageX : (event.pageX || event.clientX),
+        y: isTouchEvent ? event.targetTouches[0].pageY : (event.pageY || event.clientY)
+      };
+    }
+
+    /**
+     * @method _drag
+     * @private
+     * @param {Object} [event]
+     */
+    function _drag(event) {
+      var containerOffset = $container.offset(),
+      thumbPositionNew = {
+        left: _page(event).x - containerOffset.left - (containerSize.width / 2),
+        top: _page(event).y - containerOffset.top - (containerSize.height / 2)
+      };
+
+      self.angleCurrent = _sanitizeAngle(
+          _toDegrees(
+            Math.atan2(thumbPositionNew.left, -thumbPositionNew.top)
+            )
+          );
+
+
+      _setCSS(self.angleCurrent);
+      return false;
+    }
+
+    /**
+     * @method _setCSS
+     * @private
+     * @param {Number} [angle]
+     * @param {Function} [fireCallback]
+     */
+    function _setCSS(angle, fireCallback) {
+      closestSlidesAndAngles = _findClosestSlide(angle);
+      closestSlides = closestSlidesAndAngles[0];
+      closestAngles = closestSlidesAndAngles[1];
+
+      $overview.css("left", -(closestSlides[1] * slideSize.width + Math.abs(closestAngles[1]) * slideSize.width / (Math.abs(closestAngles[1]) + Math.abs(closestAngles[2]))));
+      $thumb.css({
+        top: -Math.cos(_toRadians(angle)) * self.options.radius + (containerSize.height / 2 - thumbSize.height / 2),
+        left: Math.sin(_toRadians(angle)) * self.options.radius + (containerSize.width / 2 - thumbSize.width / 2)
+      });
+
+      if (fireCallback) {
+        /**
+         * The move event will trigger when the carousel slides to a new slide.
+         *
+         * @event move
+         */
+        $container.trigger("move", [$slides[self.slideCurrent], self.slideCurrent]);
+        var slideno = _findClosestSlide(self.angleCurrent)[0][0];
+        $('.dot').removeClass('active');
+        $('.dot:eq(' + slideno + ')').addClass('active');
+            }
+            }
+
+            /**
+             * @method _endDrag
+             * @private
+             * @param {Object} [event]
+             */
+            function _endDrag(event) {
+              if ($(event.target).hasClass("dot")) {
+                return false;
+              }
+              event.preventDefault();
+
+              if (!touchEvents) {
+                $(document).unbind("mousemove mouseup");
+                $thumb.unbind("mouseup");
+              }
+
+              if (self.options.dotsHide) {
+                $dots.stop(true, true).fadeOut("slow");
+              }
+
+              if (self.options.dotsSnap) {
+                self.move(_findClosestSlide(self.angleCurrent)[0][0]);
+
+              }
+            }
+
+            /**
+             * @method _startDrag
+             * @private
+             * @param {Object} [event]
+             */
+            function _startDrag(event) {
+              event.preventDefault();
+              isTouchEvent = event.type == 'touchstart';
+
+              if ($(event.target).hasClass("dot")) {
+                return false;
+              }
+
+              self.stop();
+
+              if (!touchEvents) {
+                $(document).mousemove(_drag);
+                $(document).mouseup(_endDrag);
+                $thumb.mouseup(_endDrag);
+              }
+
+              if (self.options.dotsHide) {
+                $dots.stop(true, true).fadeIn("slow");
+              }
+            }
+
+            return _initialize();
+  }
+
+  /**
+   * @class tinycircleslider
+   * @constructor
+   * @param {Object} options
+   @param {Boolean} [options.dotsSnap=false] Shows dots when user starts dragging and snap to them.
+   @param {Boolean} [options.dotsHide=true] Fades out the dots when user stops dragging.
+   @param {Number}  [options.radius=140] Used to determine the size of the circleslider.
+   @param {Boolean} [options.interval=false] Move to another block on intervals.
+   @param {Number}  [options.intervalTime=intervalTime] Interval time in milliseconds.
+   @param {Number}  [options.start=0] The slide to start with.
+   */
+  $.fn[pluginName] = function (options) {
+    return this.each(function () {
+      if (!$.data(this, "plugin_" + pluginName)) {
+        $.data(this, "plugin_" + pluginName, new Plugin($(this), options));
+        //$(this).css('padding', '42px 45px 40px 41px');
+      }
+    });
+  };
+})
+);
+// Avoid `console` errors in browsers that lack a console.
+(function() {
+  var method;
+  var noop = function () {};
+  var methods = [
+    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+      'timeStamp', 'trace', 'warn'
+  ];
+  var length = methods.length;
+  var console = (window.console = window.console || {});
+
+  while (length--) {
+    method = methods[length];
+
+    // Only stub undefined methods.
+    if (!console[method]) {
+      console[method] = noop;
+    }
+  }
+}());
+
+// Place any jQuery/helper plugins in here.
+
+
+/*global jQuery */
+/*!
+ * Lettering.JS 0.6.1
+ *
+ * Copyright 2010, Dave Rupert http://daverupert.com
+ * Released under the WTFPL license
+ * http://sam.zoy.org/wtfpl/
+ *
+ * Thanks to Paul Irish - http://paulirish.com - for the feedback.
+ *
+ * Date: Mon Sep 20 17:14:00 2010 -0600
+ */
+(function($){
+  function injector(t, splitter, klass, after) {
+    var text = t.text()
+      , a = text.split(splitter)
+      , inject = '';
+    if (a.length) {
+      $(a).each(function(i, item) {
+        inject += '<span class="'+klass+(i+1)+'" aria-hidden="true">'+item+'</span>'+after;
+      });
+      t.attr('aria-label',text)
+        .empty()
+        .append(inject)
+
+    }
+  }
+
+
+  var methods = {
+    init : function() {
+
+      return this.each(function() {
+        injector($(this), '', 'char', '');
+      });
+
+    },
+
+    words : function() {
+
+      return this.each(function() {
+        injector($(this), ' ', 'word', ' ');
+      });
+
+    },
+
+    lines : function() {
+
+      return this.each(function() {
+        var r = "eefec303079ad17405c889e092e105b0";
+        // Because it's hard to split a <br/> tag consistently across browsers,
+        // (*ahem* IE *ahem*), we replace all <br/> instances with an md5 hash
+        // (of the word "split").  If you're trying to use this plugin on that
+        // md5 hash string, it will fail because you're being ridiculous.
+        injector($(this).children("br").replaceWith(r).end(), r, 'line', '');
+      });
+
+    }
+  };
+
+  $.fn.lettering = function( method ) {
+    // Method calling logic
+    if ( method && methods[method] ) {
+      return methods[ method ].apply( this, [].slice.call( arguments, 1 ));
+    } else if ( method === 'letters' || ! method ) {
+      return methods.init.apply( this, [].slice.call( arguments, 0 ) ); // always pass an array
+    }
+    $.error( 'Method ' +  method + ' does not exist on jQuery.lettering' );
+    return this;
+  };
+
+})(jQuery);
+
+
+
+
+/*global jQuery */
+/*!
+ * FitText.js 1.1
+ *
+ * Copyright 2011, Dave Rupert http://daverupert.com
+ * Released under the WTFPL license
+ * http://sam.zoy.org/wtfpl/
+ *
+ * Date: Thu May 05 14:23:00 2011 -0600
+ */
+
+(function( $ ){
+
+  $.fn.fitText = function( kompressor, options ) {
+
+    // Setup options
+    var compressor = kompressor || 1,
+    settings = $.extend({
+      'minFontSize' : Number.NEGATIVE_INFINITY,
+      'maxFontSize' : Number.POSITIVE_INFINITY
+    }, options);
+
+    return this.each(function(){
+
+      // Store the object
+      var $this = $(this);
+
+      // Resizer() resizes items based on the object width divided by the compressor * 10
+      var resizer = function () {
+        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+      };
+
+      // Call once to set.
+      resizer();
+
+      // Call on resize. Opera debounces their resize by default.
+      $(window).on('resize', resizer);
+
+    });
+
+  };
+
+})( jQuery );
+/*
+ * CircleType 0.36
+ * Peter Hrynkow
+ * Copyright 2014, Licensed GPL & MIT
+ *
+*/
+
+$.fn.circleType = function(options) {
+
+  var self = this,
+  settings = {
+    dir: 1,
+    position: 'relative',
+  };
+  if (typeof($.fn.lettering) !== 'function') {
+    console.log('Lettering.js is required');
+    return;
+  }
+  return this.each(function () {
+
+    if (options) {
+      $.extend(settings, options);
+    }
+    var elem = this,
+    delta = (180 / Math.PI),
+      fs = parseInt($(elem).css('font-size'), 10),
+      ch = parseInt($(elem).css('line-height'), 10) || fs,
+        txt = elem.innerHTML.replace(/^\s+|\s+$/g, '').replace(/\s/g, '&nbsp;'),
+        letters,
+          center;
+
+    elem.innerHTML = txt
+      $(elem).lettering();
+
+    elem.style.position =  settings.position;
+
+    letters = elem.getElementsByTagName('span');
+    center = Math.floor(letters.length / 2)
+
+      var layout = function () {
+        var tw = 0,
+        i,
+        offset = 0,
+          minRadius,
+          origin,
+            innerRadius,
+            l, style, r, transform;
+
+        for (i = 0; i < letters.length; i++) {
+          tw += letters[i].offsetWidth;
+        }
+        minRadius = (tw / Math.PI) / 2 + ch;
+
+        if (settings.fluid && !settings.fitText) {
+          settings.radius = Math.max(elem.offsetWidth / 2, minRadius);
+        }
+        else if (!settings.radius) {
+          settings.radius = minRadius;
+        }
+
+        if (settings.dir === -1) {
+          origin = 'center ' + (-settings.radius + ch) / fs + 'em';
+        } else {
+          origin = 'center ' + settings.radius / fs + 'em';
+        }
+
+        innerRadius = settings.radius - ch;
+
+        for (i = 0; i < letters.length; i++) {
+          l = letters[i];
+          offset += l.offsetWidth / 2 / innerRadius * delta;
+          l.rot = offset;
+          offset += l.offsetWidth / 2 / innerRadius * delta;
+        }
+        for (i = 0; i < letters.length; i++) {
+          l = letters[i]
+            style = l.style
+            r = (-offset * settings.dir / 2) + l.rot * settings.dir
+            transform = 'rotate(' + r + 'deg)';
+
+          style.position = 'absolute';
+          style.left = '50%';
+          style.marginLeft = -(l.offsetWidth / 2) / fs + 'em';
+
+          style.webkitTransform = transform;
+          style.MozTransform = transform;
+          style.OTransform = transform;
+          style.msTransform = transform;
+          style.transform = transform;
+
+          style.webkitTransformOrigin = origin;
+          style.MozTransformOrigin = origin;
+          style.OTransformOrigin = origin;
+          style.msTransformOrigin = origin;
+          style.transformOrigin = origin;
+          if(settings.dir === -1) {
+            style.bottom = 0;
+          }
+        }
+
+        if (settings.fitText) {
+          if (typeof($.fn.fitText) !== 'function') {
+            console.log('FitText.js is required when using the fitText option');
+          } else {
+            $(elem).fitText();
+            $(window).resize(function () {
+              updateHeight();
+            });
+          }
+        }
+        updateHeight();
+
+        if (typeof settings.callback === 'function') {
+          // Execute our callback with the element we transformed as `this`
+          settings.callback.apply(elem);
+        }
+      };
+
+    var getBounds = function (elem) {
+      var docElem = document.documentElement,
+      box = elem.getBoundingClientRect();
+      return {
+        top: box.top + window.pageYOffset - docElem.clientTop,
+        left: box.left + window.pageXOffset - docElem.clientLeft,
+        height: box.height
+      };
+    };
+
+    var updateHeight = function () {
+      var mid = getBounds(letters[center]),
+      first = getBounds(letters[0]),
+      h;
+      if (mid.top < first.top) {
+        h = first.top - mid.top + first.height;
+      } else {
+        h = mid.top - first.top + first.height;
+      }
+      elem.style.height = h + 'px';
+    }
+
+    if (settings.fluid && !settings.fitText) {
+      $(window).resize(function () {
+        layout();
+      });
+    }
+
+    if (document.readyState !== "complete") {
+      elem.style.visibility = 'hidden';
+      $(window).load(function () {
+        elem.style.visibility = 'visible';
+        layout();
+      });
+    } else {
+      layout();
+    }
+  });
+};
+$(document).ready(function() {
+  var widthtoacquire = $(window).width() - 30;
+  var radius = (widthtoacquire - 80) / 2 > 150 ? 150 : (widthtoacquire - 80) / 2;
+  $("#rotatescroll").css({
+    width: widthtoacquire - 80,
+    height: widthtoacquire - 80
+  });
+  $(".viewport, .overview li").css({
+    width: widthtoacquire - 80,
+    height: widthtoacquire - 80
+  });
+  $("#rotatescroll").tinycircleslider({
+    dotsSnap: true,
+    radius: radius,
+    dotsHide: false,
+    slides: ["Central", "My Channel", "TV Shows", "Movies", "Deals", "Friends", "Trending", "Channels"],
+    interval: false
+  });
+
+});
+
+
+          
+          </script>
+          
+          <script>
+              $(document).ready(function($) {
+  $('#panel').find('.panel-toggle').click(function() {
+    // Change the active panel 'plus' symbol to a 'minus' symbol
+    $(this).find('.panel-symbol').toggleClass('fa-plus');
+    $(this).find('.panel-symbol').toggleClass('fa-minus');
+
+    // Expand or collapse this panel
+    $(this).next().slideToggle(400);
+  });
+});
+              
+          </script>
+  </body>
+</html>
