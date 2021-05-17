@@ -1,0 +1,614 @@
+<html lang="en">
+  <head>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+
+  
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+       <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+   <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+   <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <title>NEXT EVENT</title>
+    <style>
+
+
+* {
+  margin:0;
+  padding:0;
+  outline:none;
+  list-style:none;
+  text-decoration:none;
+  box-sizing:border-box;
+  color:#111;
+  background: transparent;
+  border:none;
+}
+
+body {
+  background: #FFF;
+  font-family: 'Hind', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* H1 EFFECT */
+.effect {
+  font-size: 6vw;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+ -webkit-background-clip: text;
+  background-clip: text;
+  background: -webkit-linear-gradient(0deg, #222 50%, transparent 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 100% 0;
+  background-size:200% 100%;
+  transition: 0.6s all cubic-bezier(0.860, 0.000, 0.070, 1.000) 0.8s;
+}
+
+.effect:before{
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #eaeaea;
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: 0;left: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.effect:after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #222;
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: 0;left: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.effect.active {
+  background-position: 0 0;
+}
+
+.effect.active:before {
+    animation: anime 1.2s cubic-bezier(0.860, 0.000, 0.070, 1.000) forwards;
+}
+.effect.active:after {
+    animation: anime 1.2s 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) forwards;
+}
+@keyframes anime {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  50% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  51%{
+    transform-origin: right;
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+
+
+/* CTA EFFECT */
+
+.cta {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 2em;
+  padding: 2px 10px;
+  background: #222;
+  margin-top: 20px;
+  transition: 0.2s all ease-out;
+  -webkit-transition: 0.2s all ease-out;
+  -moz-transition: 0.2s all ease-out;
+  color: #fff;
+  transition: 0.3s all ease-out;
+  -webkit-transition: 0.3s all ease-out;
+  -moz-transition: 0.3s all ease-out;
+  letter-spacing: 1px;
+}
+
+a.cta.outline {
+  position: relative;
+  background: transparent;
+  border: 1px solid #222;
+  overflow: hidden;
+}
+
+.cta.outline:before {
+  content: "";
+  height: 100%;
+  z-index: -1;
+  width: 100%;
+  background: #222;
+  display: block;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  transition: 0.6s transform cubic-bezier(1.000, 0.610, 0.165, 1.000);
+  -webkit-transition: 0.6s transform cubic-bezier(1.000, 0.610, 0.165, 1.000);
+  -moz-transition: 0.6s transform cubic-bezier(1.000, 0.610, 0.165, 1.000);
+  transform-origin:right;
+  -webkit-transform-origin:right;
+}
+.cta.outline span {
+  position: relative;
+  z-index: 3;
+   -webkit-background-clip: text;
+  background-clip: text;
+  background: -webkit-linear-gradient(0deg, #FFF 50%, #222 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 100% 0;
+  background-size:200% 100%;
+  color: transparent;
+  transition: 0.6s all cubic-bezier(1.000, 0.610, 0.165, 1.000) 0.2s;
+  -webkit-transition: 0.6s all cubic-bezier(1.000, 0.610, 0.165, 1.000) 0.2s;
+  -moz-transition: 0.6s all cubic-bezier(1.000, 0.610, 0.165, 1.000) 0.2s;
+}
+.cta.outline:hover:before {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  transform-origin:left;
+  -webkit-transform-origin:left;
+}
+.cta.outline:hover{
+  box-shadow: none;
+}
+.cta.outline:hover span{
+  background-position: 0 0;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s all ease-out 2s;
+}
+a.fade {
+  transition: 0.6s all ease-out 2.6s;
+}
+.fade.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* bullshit */
+
+section {
+  text-align: center;
+  padding: 0 20%;
+  height: 100vh;
+}
+.wrap {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+h3 {
+  margin: 10px 0 0 0;
+}
+   
+/*buttons*/
+.margin{
+    margin-top:20px;    
+    margin-bottom:20px;
+}
+
+.themeBtn {
+    background: #ff5c00;
+    color: #ffffff !important;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 0.8;
+    padding: 18px 30px;
+    text-transform: capitalize;
+    border-radius: 1px;
+    letter-spacing: 0.5px;
+	border:0px !important;
+	cursor:pointer;
+	border-radius:100px;
+
+}
+a:hover{
+    color: #ffffff;
+    text-decoration:none;
+}
+.themeBtn4 {
+    background: #006eff;
+    color: #ffffff !important;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 0.8;
+    padding: 18px 30px;
+    text-transform: capitalize;
+    border-radius: 1px;
+    letter-spacing: 0.5px;
+	border:0px !important;
+	cursor:pointer;
+	border-radius:100px;
+
+}
+.themeBtn4:hover {
+    background: rgb(0, 110, 255);
+    color: #ffffff;
+    box-shadow: 0 10px 25px -2px rgba(0, 110, 255, 0.6);
+}
+/*footer*/
+ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+.footer_area {
+	padding:60px 0 20px;
+	position: relative;
+	color: #fff;
+	z-index: 100;
+	background: #222;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.single_ftr form{
+	margin-top: 8px;
+}
+.single_ftr p{
+	margin-bottom: 10px;
+}
+
+.sf_title{
+    color: #33d286;
+    text-transform: uppercase;
+    font-size: 17px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+.ftr_logo {
+    float: left;
+    padding: 15px 46px 0 0;
+}
+.ftr_logo a img {
+    transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+}
+.ftr_logo a:hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+.newsletter_form form{
+	position: relative;
+	display: block;
+}
+.newsletter_form {
+	margin-top: 0px;
+	overflow: hidden;
+}
+.single_ftr p{
+	display: inline-block;
+}
+.newsletter_form .form-control {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 8px 20px;
+    width: 100%;
+	position: relative;
+	background: transparent;
+	color: #fff;
+	border-radius: 0;
+}
+
+.newsletter_form button {
+	border: inherit;
+	border-radius: 0;
+	background: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: none;
+	border: 1px solid transparent;
+	transition: 0.5s;
+	letter-spacing: 0.5px;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	padding: 12px 17px;
+	transition: .5s;
+}
+.newsletter_form button:hover,
+.newsletter_form button:hover{
+	background: transparent;
+	color: #33d286;
+	opacity: .9;
+}
+.newsletter_form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    opacity: 1
+}
+
+.newsletter_form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: 1
+}
+.form-control{
+
+}
+.form-control:focus{
+	border-color: #33d286;
+}
+
+.single_ftr li {
+    padding-bottom: 7px;
+    color: #fff;
+}
+.single_ftr a {
+    color: #fff;
+}
+.single_ftr a:hover {
+    color: #33d286;
+}
+
+.ftr_social_icon li {
+	display: inline-block;
+	text-align: center;
+	padding: 8px;
+}
+
+
+.ftr_social_icon ul li a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: white;
+    display: inline-block;
+    font-size: 27px;
+    height: 40px;
+    line-height: 32px;
+    padding: 4px 8px;
+    width: 40px;
+	transition: .5s;
+}
+.ftr_social_icon ul li a:hover{
+	background: #33d286;
+	border-color: #33d286;
+	color: #fff;
+}
+
+.ftr_btm_area {
+	background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px dotted #888;
+	margin-top: 28px;
+	z-index: 100;
+	position: relative;
+}
+.copyright_text{
+    margin: 6px 0;
+}
+.payment_mthd_icon li {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 30px;
+	color: #fff;
+}
+ /*nav*/
+
+        </style>
+        
+  </head>
+  <body>
+      
+     
+      <section class="first">
+  <div class="wrap">
+    <h1 class="effect">CHITRALEKH EVENT DETAILS</h1>
+    <p class="fade">YOU WILL GET AN UPDATE FOR UPCOMING EVENTS</p>
+    <a class="cta outline fade"><span>View more</span></a></div>
+</section>
+
+<section id="anchor">
+   <div class="wrap">
+    <h1>CURRENT EVENT</h1>
+     <h3>Annual Chitralekh Competition 2021. The Registration will start from 18th May 2021 upto 22nd May 2021</h3>
+  </div>
+</section>
+      <div class="row justify-content-center">
+          <div class="container-fluid margin">
+          <center><a  href="2020.html" target="_blank" class="themeBtn4">GO TO REGISTER</a></center>
+</div> 
+       
+      </div>
+<section>
+   <div class="wrap">
+       <h2><u>UPCOMMING EVENT</u></h2>
+     <p>THERE IS NO UPCOMMING COMPETITION,EVENTS OR WORKSHOP!</p>
+  </div>
+      
+</section>
+       <div class="row justify-content-center">
+      <div class="container-fluid margin">
+          <center><a  href="main.html" target="_blank" class="themeBtn4">GO TO HOME</a></center>
+</div>
+      </div>
+      <br>
+      <br>
+      <br>
+<footer class="footer_area">
+			<div class="container">
+				<div class="row">				
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Connect with Professional</h4>
+							<ul>
+                                                            <li> <a href="https://instagram.com/arpita_rutu?igshid=1kddv76c1mpvw">Club Coordinator</a></li>
+								<li><a href="https://www.instagram.com/_suyash_05_/?hl=en">Developer</a></li>
+                                                                <li><a href="https://instagram.com/agarya_yashi?igshid=vcjccwg2mguq">Designer</a></li>
+                                                                <li><a href="https://www.instagram.com/chitralekh_/">Content Creator</a></li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Information</h4>
+							<ul>
+								<li><a href="#services">About Us</a></li>
+								<li><a href="main.html">What we do</a></li>
+								<li><a href="2020.html">Competition 2020</a></li>
+								<li><a href="2021.html#order">Terms & Conditions</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Competition 2021</h4>
+							<ul>
+								<li><a href="2021.html">Photography</a></li>
+								<li><a href="2021.html">Videography</a></li>
+								<li><a href="2021.html">Writing</a></li>
+								<li><a href="2021.html">Art</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->	
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Contact Us</h4>
+							<div class="newsletter_form">
+                                                            <p><a href="https://mail.google.com/mail/u/3/?ogbl#inbox">chitralekh2021@gmail.com</a></p>
+								
+							</div>
+						</div>
+					</div> <!--  End Col -->
+					
+				</div>
+			</div>
+	
+		
+			<div class="ftr_btm_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="ftr_social_icon">
+								<ul>
+									<li><a href="https://www.facebook.com/chitralekh.club"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com/chitralekh_/"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="https://twitter.com/Chitralekh1"><i class="fa fa-twitter"></i></a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<p style="color:whitesmoke;">© 2021 Beta Version</p>
+						</div>
+						
+						<div class="col-sm-4">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+      
+      <script>
+        $(window).load(function(){
+  $('.effect').each(function(){
+    $(this).addClass('active');
+  })
+  $('.fade').addClass('active');
+});
+
+$(document).ready(function(){
+  
+  $('.cta').click(function(){
+    $('html, body').animate({
+      scrollTop: $("#anchor").offset().top
+    }, 1000);
+  });
+  
+  $('.first').bind('mousewheel', function(e){
+    return false;
+  });
+
+});
+
+
+
+      </script>
+      
+      
+  </body>
+</html>
