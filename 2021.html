@@ -1,0 +1,1476 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="intro.css">
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+ <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+   <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+   <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+     
+
+    <title>Chitralekh Club 2021</title>
+    <style>
+     
+        /*nav*/
+    .menu {
+	    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 21;
+    right: 1%;
+}
+.menu span {
+	position: relative;
+	margin-top: 9px;
+	margin-bottom: 9px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -1.5px;
+}
+.menu span, .menu span::before, .menu span::after {
+	display: block;
+	
+		width: 26px;
+	right: 0;
+	height: 3px;
+	background-color: #fccb32;
+	outline: 1px solid transparent;
+	-webkit-transition-property: background-color, -webkit-transform;
+	-moz-transition-property: background-color, -moz-transform;
+	-o-transition-property: background-color, -o-transform;
+	transition-property: background-color, transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.menu span::before, .menu span::after {
+	position: absolute;
+	content: "";
+}
+.menu span::before {
+	top: -9px;
+	 width:20px
+}
+.menu span::after {
+	top: 9px;width: 33px;
+
+}
+.menu.clicked span {
+	background-color: transparent;
+}
+.menu.clicked span::before {
+	-webkit-transform: translateY(9px) rotate(45deg);
+	-moz-transform: translateY(9px) rotate(45deg);
+	-ms-transform: translateY(9px) rotate(45deg);
+	-o-transform: translateY(9px) rotate(45deg);
+	transform: translateY(9px) rotate(45deg);    width: 33px;
+}
+.menu.clicked span::after {
+	-webkit-transform: translateY(-9px) rotate(-45deg);
+	-moz-transform: translateY(-9px) rotate(-45deg);
+	-ms-transform: translateY(-9px) rotate(-45deg);
+	-o-transform: translateY(-9px) rotate(-45deg);
+	transform: translateY(-9px) rotate(-45deg);
+}
+.menu.clicked span:before, .menu.clicked span:after {
+	background-color: #ffffff;
+}
+.menu:hover {
+	cursor: pointer;
+}
+/*  NAV
+========================================== */
+
+#nav {
+	background: #211316;
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	right: 0;
+	height: 100%;
+	max-width: 250px;
+	width: 100%;
+	padding: 100px 40px 60px 40px;
+	overflow-y: auto;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-moz-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-o-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+#nav.show {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+}
+#nav.show ul.main li {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
+.menu.clicked {
+    position: fixed;
+    z-index: 99;
+}
+#nav.show ul.main li:nth-child(1) {
+	transition-delay: 0.15s;
+}
+#nav.show ul.main li:nth-child(2) {
+	transition-delay: 0.3s;
+}
+#nav.show ul.main li:nth-child(3) {
+	transition-delay: 0.45s;
+}
+#nav.show ul.main li:nth-child(4) {
+	transition-delay: 0.6s;
+}
+#nav.show ul.main li:nth-child(5) {
+	transition-delay: 0.75s;
+}
+#nav.show ul.main li:nth-child(6) {
+	transition-delay: 0.9s;
+}
+#nav.show ul.main li:nth-child(7) {
+	transition-delay: 1.05s;
+}
+#nav.show ul.main li:nth-child(8) {
+	transition-delay: 1.2s;
+}
+#nav.show ul.main li:nth-child(9) {
+	transition-delay: 1.35s;
+}
+#nav.show .about, #nav.show .social, #nav.show ul.sub {
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	opacity: 1;
+	transition-delay: .85s;
+}
+
+@media (min-width: 667px) {
+#nav {
+	padding: 120px 30px 70px 20px;
+}
+}
+#nav ul.main {
+	list-style-type: none;
+}
+#nav ul.main li {
+	-webkit-transform: translateX(40px);
+	-moz-transform: translateX(40px);
+	-ms-transform: translateX(40px);
+	-o-transform: translateX(40px);
+	transform: translateX(40px);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	float: none;
+	    list-style: circle;
+    color: #fff
+}
+#nav ul.main li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.main li a {
+	color: #ffffff;
+	
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1rem;
+	display: block;
+	padding: 10px 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.main li a span {
+	color: #b7ac7f;
+}
+#nav ul.main li a:hover {
+	color: #b7ac7f;
+}
+#nav ul.sub {
+	list-style-type: none;
+	margin-top: 40px;
+	-webkit-transform: translateY(30px);
+	-moz-transform: translateY(30px);
+	-ms-transform: translateY(30px);
+	-o-transform: translateY(30px);
+	transform: translateY(30px);
+	opacity: 0;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+#nav ul.sub li {
+	margin-bottom: 10px;
+}
+#nav ul.sub li:last-of-type {
+	margin-bottom: 0px;
+}
+#nav ul.sub li a {
+	color: #ffffff;
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 1px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#nav ul.sub li a:hover {
+	color: #b7ac7f;
+}
+.menu:hover span{}
+
+/*  OVERLAY
+========================================== */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #603e82;
+	opacity: 0;
+	visibility: hidden;
+}
+.overlay.show {
+	opacity: 0.8;
+	visibility: visible;
+}    
+  
+/*footer*/
+ ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+.footer_area {
+	padding:60px 0 20px;
+	position: relative;
+	color: #fff;
+	z-index: 100;
+	background: #222;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.single_ftr form{
+	margin-top: 8px;
+}
+.single_ftr p{
+	margin-bottom: 10px;
+}
+
+.sf_title{
+    color: #33d286;
+    text-transform: uppercase;
+    font-size: 17px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+.ftr_logo {
+    float: left;
+    padding: 15px 46px 0 0;
+}
+.ftr_logo a img {
+    transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+}
+.ftr_logo a:hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+.newsletter_form form{
+	position: relative;
+	display: block;
+}
+.newsletter_form {
+	margin-top: 0px;
+	overflow: hidden;
+}
+.single_ftr p{
+	display: inline-block;
+}
+.newsletter_form .form-control {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 8px 20px;
+    width: 100%;
+	position: relative;
+	background: transparent;
+	color: #fff;
+	border-radius: 0;
+}
+
+.newsletter_form button {
+	border: inherit;
+	border-radius: 0;
+	background: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: none;
+	border: 1px solid transparent;
+	transition: 0.5s;
+	letter-spacing: 0.5px;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	padding: 12px 17px;
+	transition: .5s;
+}
+.newsletter_form button:hover,
+.newsletter_form button:hover{
+	background: transparent;
+	color: #33d286;
+	opacity: .9;
+}
+.newsletter_form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    opacity: 1
+}
+
+.newsletter_form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: 1
+}
+.newsletter_form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: 1
+}
+.form-control{
+
+}
+.form-control:focus{
+	border-color: #33d286;
+}
+
+.single_ftr li {
+    padding-bottom: 7px;
+    color: #fff;
+}
+.single_ftr a {
+    color: #fff;
+}
+.single_ftr a:hover {
+    color: #33d286;
+}
+
+.ftr_social_icon li {
+	display: inline-block;
+	text-align: center;
+	padding: 8px;
+}
+
+
+.ftr_social_icon ul li a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 27px;
+    height: 40px;
+    line-height: 32px;
+    padding: 4px 8px;
+    width: 40px;
+	transition: .5s;
+}
+.ftr_social_icon ul li a:hover{
+	background: #33d286;
+	border-color: #33d286;
+	color: #fff;
+}
+
+.ftr_btm_area {
+	background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px dotted #888;
+	margin-top: 28px;
+	z-index: 100;
+	position: relative;
+}
+.copyright_text{
+    margin: 6px 0;
+}
+.payment_mthd_icon li {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 30px;
+	color: #fff;
+}
+/*slide*/
+#slider-animation{max-height:1500px;}
+.heading-box h2{ width:100%; color: red; }
+h2, p{color:#fff;}
+.carousel-item img{width:100%;}
+.text-box {
+	position: absolute;
+	top: 70%;
+	left: 15%;
+	right: 15%;
+	color: #000;
+	transform: translateY(-50%);
+}
+/*circle*/
+/*swiper */
+
+  
+ 
+/*competition*/
+.color-list {
+  display: flex;
+  /* 
+    On small displays we want each .color stacked.
+    Flexbox let's us determine stacking direction via
+    flex-direction: column;
+  */
+  flex-direction: column;
+  height: 100vh;
+}
+
+.color {
+  /*
+    Each .color is also a flex item. We do this so that we have reasonable
+    distribution of space between elements. We use flex-direction so that
+    flexbox knows which way to position each element (in this case, vertical).
+  */
+  display: flex;
+  flex-direction: column;
+  
+  /*
+    .color can grow but not shrink (we want space for first three elements).
+    10em is enough space to see name, hsl, and hex values. 
+    Try shrinking vertically on a small display.
+  */
+  flex: 1 0 10em;  
+  box-shadow: 0 0 30px #424242;
+  
+  /* Handles any clipping/overflow issues on transition */
+  overflow: hidden;
+  padding: 1em;
+  color: white;
+  transition: flex-basis 500ms ease-in-out;
+}
+
+.color:hover {
+  /*
+    Change the flex-basis so that we know what
+    size to transition to on hover. Arbitrary,
+    based on our design/content.
+  */
+  flex-basis: 20em;
+}
+
+.color:hover .details {
+  opacity: 1;
+}
+
+.name {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.details li {
+  font-size: 1em;
+  line-height: 2em;
+}
+
+@media (min-width: 600px) {
+  .color-list {
+    /*
+      Change the direction so that each .color
+      aligns horizontally
+    */
+    flex-direction: row;
+  }
+  
+  .color {
+    /*
+      No scrollbars on mobile
+    */
+    flex-shrink: 1;
+  }
+}
+
+/* Fonts, OK at the end for this demo! */
+/*FAQ*/
+#panel-title {
+  color: crimson;
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+  padding: 10px 0px;
+}
+
+
+#panel {
+  padding: 10px 25px;
+}
+
+.panel-tab {
+	margin: 40px auto;
+	box-shadow: 0px 2px 3px 1px rgba(50,50,50,0.3);
+}
+
+.panel-toggle {
+  color: whitesmoke;
+	background-color: crimson;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+}
+
+.panel-title {
+  font-size: 24px;
+  margin: 0px;
+}
+
+.panel-content {
+  color: grey;
+  display: none;
+  padding: 20px 25px;
+	border: 1px solid rgba(50,50,50,0.3);
+}
+/*image pop up*/
+.zaza img {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+img:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close-model {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-model:hover,
+.close-model:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/*video*/
+  .bs-example{
+        margin: 10px;        
+    }
+ /*order*/
+.order{
+  width:100%;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.step-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color:gray;
+    transition: .4s;
+}
+
+.step-button[aria-expanded="true"] {
+    width: 60px;
+    height: 60px;
+    background-color:red;
+    color: #fff;
+}
+
+.done {
+    background-color:green;
+    color: #fff;
+}
+
+.step-item {
+    z-index: 10;
+    text-align: center;
+}
+
+#progress {
+    position: absolute;
+    width: 95%;
+    z-index: 5;
+    height: 10px;
+    margin-left: 18px;
+    margin-bottom: 18px;
+}
+
+/* to customize progress bar */
+#progress::-webkit-progress-value {
+    background-color: blue;
+    transition: .2s ease;
+}
+
+#progress::-webkit-progress-bar {
+    background-color:blue;
+
+}
+/*title*/
+
+h1#b {
+font-size: 30px;
+font-family:medula one;
+color:#fff;
+text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+h1 {
+font-size: 30px;
+font-family:medula one;
+color:#fff;
+text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+h1 span {
+  -moz-transition: color 1s;
+  -webkit-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
+}	
+
+
+
+h1:hover .char1 {
+  -moz-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  color: red;
+-webkit-transform: scale(0.9);
+
+}
+
+h1:hover .char2 {
+  -moz-transition: color 0.2s 0.1s;
+  -webkit-transition: color 0.2s 0.1s;
+  -o-transition: color 0.2s 0.1s;
+  transition: color 0.2s 0.1s;
+  color: orange;
+}
+
+h1:hover .char3 {
+  -moz-transition: color 0.2s 0.2s;
+  -webkit-transition: color 0.2s 0.2s;
+  -o-transition: color 0.2s 0.2s;
+  transition: color 0.2s 0.2s;
+  color: yellow;
+}
+
+h1:hover .char4 {
+  -moz-transition: color 0.2s 0.3s;
+  -webkit-transition: color 0.2s 0.3s;
+  -o-transition: color 0.2s 0.3s;
+  transition: color 0.2s 0.3s;
+  color: green;
+}
+
+h1:hover .char5 {
+  -moz-transition: color 0.2s 0.4s;
+  -webkit-transition: color 0.2s 0.4s;
+  -o-transition: color 0.2s 0.4s;
+  transition: color 0.2s 0.4s;
+  color: blue;
+}
+
+h1:hover .char6 {
+  -moz-transition: color 0.2s 0.5s;
+  -webkit-transition: color 0.2s 0.5s;
+  -o-transition: color 0.2s 0.5s;
+  transition: color 0.2s 0.5s;
+  color: indigo;
+}
+
+
+h2{
+    color: black;
+}
+
+ </style>
+  </head>
+  <body>
+    <div class="menu"> <span></span> </div>
+<nav id="nav">
+		<ul class="main">
+				<li><a target="_blank" href="main.html">HOME</a></li>
+				<li><a target="_blank" href="contact.html">OUR TEAM</a></li>
+				<li><a href="2020.html">2020</a></li>
+				<li><a href="2021.html">2021(REGISTER)</a></li>
+				
+				<li><a target="_blank" href="coming.html">NEXT EVENT</a></li>
+		</ul>
+</nav>
+<div class="overlay"></div> 
+
+
+<section>
+    <div id="slider-animation" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+ 
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="bg1.jpg" alt="Los Angeles">
+ <div class="text-box">
+            <div class="row align-items-center">
+                   
+            <div class="col-md-4">
+                <h1 class="wow fadeInUp" data-wow-duration="4s">Build your Skill</h1>
+            <p class="wow fadeInUp" data-wow-duration="2s">As you know, now a days skill is more important than anything and here is "Chitralekh 2021" show your self styled skill. </p>
+            
+            
+            </div>
+                
+          
+            <div class="col-md-6 wow slideInLeft" data-wow-duration="4s">
+               <img src="car1.png">
+           
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+        <img src="bg9.jpg" alt="Los Angeles">
+ <div class="text-box">
+            <div class="row align-items-center">
+                   
+            <div class="col-md-6">
+                <h1 class="wow fadeInUp" data-wow-duration="4s">Digitally Enrollment </h1>
+            <p class="wow fadeInUp" data-wow-duration="2s">In this pandemic, we organize this competition digitally in our social media platform. </p>
+            </div>
+            <div class="col-md-6 wow slideInLeft" data-wow-duration="4s">
+               <img src="car1.png">
+           
+        </div>
+        </div>
+    </div>
+    </div>
+     <div class="carousel-item">
+        <img src="bg7.jpg" alt="Los Angeles">
+ <div class="text-box">
+            <div class="row align-items-center">
+                   
+            <div class="col-md-6">
+                <h1 class="wow fadeInUp" data-wow-duration="4s"> Get your Reward </h1>
+            <p class="wow fadeInUp" data-wow-duration="2s">All the hard work is pay off in the terms of your happiness and we love to give reward for your smile. </p>
+            </div>
+            <div class="col-md-6 wow slideInLeft" data-wow-duration="4s">
+               <img src="car1.png">
+           
+        </div>
+        </div>
+    </div>
+    </div>
+  
+</div>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#slider-animation" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#slider-animation" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+    
+</section>
+
+<br>
+
+<div class="container">
+
+<div style="width:500px;">
+<h1 id=2>
+<span class="char1">Chitralekh</span>
+<span class="char2">Competition</span>
+<span class="char3">2021</span>
+<span class="char4">start</span>
+<span class="char5">Today!</span>
+
+</h1>
+
+</div>
+</div>
+
+
+ <div class="zaza">
+ <img src="poster.jpeg" alt="Snow" style="width:500%;max-width:500px">
+  </div>
+
+
+  
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close-model">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<div class="bs-example">
+ 
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="final.mp4"></iframe>
+    </div>
+ </div>
+<br>
+
+<div class="container">
+
+<div style="width:500px;">
+<h1 id=2>
+<span class="char1">3</span>
+<span class="char2">Simple</span>
+<span class="char3">Step</span>
+<span class="char4">to</span>
+<span class="char5">Register</span>
+
+</h1>
+
+</div>
+</div>
+
+<section id="order">
+        <div class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="steps">
+                    <progress id="progress" value=0 max=100 ></progress>
+                    <div class="step-item">
+                        <button class="step-button text-center" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1
+                        </button>
+                        <div class="step-title">
+                            First Step
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2
+                        </button>
+                        <div class="step-title">
+                            Second Step
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            3
+                        </button>
+                        <div class="step-title">
+                            Third Step
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div  id="headingOne">
+                        
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h2>Unite Your Masterpiece</h2></div>
+                            
+                            First, start collecting your awesome record like  picture, drawing, video or writing materials. <u>You can submit any one of them or all of them if you wish so. <strong>The 
+                                    price of one file is Rs 10/- .</strong></u> For example if you want to submit photo and video so the total charge is Rs 20/-.
+                                    <br><strong>NOTE :</strong> While Sending, please mention your details
+                                    <ul>
+                                        <li>FULL NAME</li>
+                                        <li>Caption Related to file</li>
+                                        <li>INSTAGRAM ID</li>
+                                        <li>Screenshot of Payment</li>
+                                        <li>Transaction id</li>
+                                    </ul>
+                                    <strong>    If You not have Instagram Id, you can submit your facebook id with us.</strong>
+                                    <br>Move to Next Step for<strong> Payment.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div  id="headingTwo">
+                        
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                      <div class="text-center">
+                                <h2>Submit Your Masterpiece</h2></div>
+                            
+                            Now, in Second Step you have to Submit your Record with us. You can Submit in our<strong> <a href="https://mail.google.com/mail/u/3/?ogbl#inbox">Email Id</a></strong> with a details given in
+                             Step 1.
+                             <br> <strong> List of Payment Method</strong>
+                            <ul>
+                                <li>Paytm Wallet : 7348160510</li>
+                                 <li>Google Pay : 7348160510</li>
+                                  <li> UPI ID : chaudharysuyashsrivastava@oksbi</li>
+                            </ul>
+                            
+                            In Further if anyone need bank account details,You can directly DM in Our <strong> <a href="https://www.instagram.com/chitralekh_/">INSTAGRAM</a></strong>  or  <strong> <a href="https://www.facebook.com/chitralekh.club">FACEBOOK</a></strong> account for further procedure.
+                            <br>Congrats for completing Step 2.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div  id="headingThree">
+                        
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h2>HURRAY! All SET.</h2></div>
+                            
+                            Congrats for successfully participated in Competition. <strong>You will get confirmation list through Email, Instagram or Facebook. </strong>
+                             <br>Be Sure to follow our Social Media pages for any update.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+<br>
+<div class="container">
+
+<div style="width:500px;">
+<h1 id=2>
+<span class="char1">Rules</span>
+<span class="char2">and</span>
+<span class="char3">Regulation</span>
+<span class="char4">to</span>
+<span class="char5">Competition</span>
+
+</h1>
+
+</div>
+</div>
+
+<div class="color-list">
+    <br>
+    <br>
+    <br>
+ 
+  <section class="color" style="background: hsl(4,99%,66%);">
+    <h2 class="name">VIDEOGRAPHY DOMAIN</h2>
+    <ul class="details">
+      <li>Only 30 Sec Video would be taken.</li>
+      <li>Your Own Edited Video will be accepted.</li>
+      <li>Template can be use.</li>
+      <li>Submit your video in mp4, avi, mov, mts only.</li>
+      <li>Submit your video with your name and suitable caption.</li>
+    </ul>
+  </section>
+
+  <section class="color" style="background: hsl(233,21%,56%);">
+    <h2 class="name">PHOTOGRAPHY DOMAIN</h2>
+    <ul class="details">
+      <li>For Photography the theme is YOUR BEST SHOT.</li>
+      <li>Photo Manipulation is not allowed.</li>
+      <li>Some Basic Editing is allowed.</li>
+      <li>Participants have to send both original and Edited one</li>
+      <li>The Size of Photo should be greater than 3MB.</li>
+      <li>Submit your photo with your name and suitable caption. </li>
+      <li>No Watermark</li>
+      <li>Should be submitted only jpg, jpeg and png extension only.</li>
+    </ul>
+  </section>
+    
+  
+  <section class="color" style="background: hsl(357,26%,42%);">
+    <h2 class="name">WRITING DOMAIN</h2>
+    <ul class="details">
+      <li>Upload only your orginal work.</li>
+      <li>Writing can be accepted both digital and manual.</li>
+      <li>For Manual Writing paper should be used only A4 Size.</li>
+      <li>For Digital Writing you can submit using docx, docm, dot, dotx extension only.</li>
+     
+      <li>Short Story - 150 to 200 words.</li>
+      <li>Poetry - 80 words. </li>
+      <li>Quote - 30 to 40 words. </li>
+      
+    </ul>
+  </section>
+  <section class="color" style="background: hsl(144,33%,68%);">
+    <h2 class="name">ART DOMAIN</h2>
+    <ul class="details">
+      <li>Paper should be used only A3 and A4 size.</li>
+      <li>Accepted art shaded black and white also. </li>
+      <li>No Watermark or Add Mark.</li>
+      <li>Some filter to be used while submitting.</li>
+      
+      <li>Participant have to send both original and filter one. </li>
+      <li>Art should be submit with your name and suitable caption.</li>
+    </ul>
+  </section>
+
+ 
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div id="panel">
+
+		<h2 id=panel-title>
+			<i class="fa fa-question-circle"></i>
+			Frequently Asked Questions
+		</h2>
+		
+		<!-- Tab #1 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title"> If I unable to send File through email, So How I can Send it?</h2>
+				<i class="panel-symbol fa fa-plus"></i>
+			</div>
+			<div class="panel-content">
+                            <p style="color:black;">You can submit your record directly in our <strong>Whatsapp Number: 7455087113</strong> with every details mention in <a href="#order">3 steps.</a></p>
+			</div>
+		</div>
+		
+		<!-- Tab #2 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title">When I will get a Confirmation message for successfully Register?</h2>
+				<i class="panel-symbol fa fa-plus"></i>
+			</div>
+			<div class="panel-content">
+				<p style="color:black;"> You will get a confirmation mail in 1-2 Workings days.</p>
+			</div>
+		</div>
+		
+		<!-- Tab #3 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title">Will I get a Certificate ?</h2>
+				<i class="panel-symbol fa fa-plus"></i>
+			</div>
+			<div class="panel-content">
+				<p style="color:black;">  Of course you will get a Certificate and many other coupons and voucher.</p>
+			</div>
+		</div>
+		
+		<!-- Tab #4 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title">What If I Don't use any online payment methods?</h2>
+				<i class="panel-symbol fa fa-plus"></i>
+			</div>
+			<div class="panel-content">
+			<p style="color:black;">  Don't worry ! You can directly DM in our <strong> <a href="https://www.instagram.com/chitralekh_/">INSTAGRAM</a></strong>  or  <strong> <a href="https://www.facebook.com/chitralekh.club">FACEBOOK</a></strong> account for taking bank account details or any other possible method.</p>	
+			</div>
+		</div>
+		
+		<!-- Tab #5 -->
+		<div class="panel-tab">
+			<div class="panel-toggle">
+				<h2 class="panel-title">When Will I get a reward?</h2>
+				<i class="panel-symbol fa fa-plus"></i>
+			</div>
+			<div class="panel-content">
+				<p style="color:black;">  You will get your reward within 2-3 weeks in workings days.</p>
+			</div>
+		</div>			
+	</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+   <footer class="footer_area">
+			<div class="container">
+				<div class="row">				
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Connect with Professional</h4>
+							<ul>
+                                                            <li> <a href="https://instagram.com/arpita_rutu?igshid=1kddv76c1mpvw">Club Coordinator</a></li>
+								<li><a href="https://www.instagram.com/_suyash_05_/?hl=en">Developer</a></li>
+                                                                <li><a href="https://instagram.com/agarya_yashi?igshid=vcjccwg2mguq">Designer</a></li>
+                                                                <li><a href="https://www.instagram.com/chitralekh_/">Content Creator</a></li>
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Information</h4>
+							<ul>
+								<li><a href="#services">About Us</a></li>
+								<li><a href="main.html">What we do</a></li>
+								<li><a href="2020.html">Competition 2020</a></li>
+								<li><a href="2021.html#order">Terms & Conditions</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Competition 2021</h4>
+							<ul>
+								<li><a href="2021.html">Photography</a></li>
+								<li><a href="2021.html">Videography</a></li>
+								<li><a href="2021.html">Writing</a></li>
+								<li><a href="2021.html">Art</a></li>
+								
+							</ul>
+						</div>
+					</div> <!--  End Col -->	
+					
+					<div class="col-md-3 col-sm-6">
+						<div class="single_ftr">
+							<h4 class="sf_title">Contact Us</h4>
+							<div class="newsletter_form">
+                                                            <p><a href="https://mail.google.com/mail/u/3/?ogbl#inbox">chitralekh2021@gmail.com</a></p>
+								
+							</div>
+						</div>
+					</div> <!--  End Col -->
+					
+				</div>
+			</div>
+	
+		
+			<div class="ftr_btm_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="ftr_social_icon">
+								<ul>
+									<li><a href="https://www.facebook.com/chitralekh.club"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com/chitralekh_/"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="https://twitter.com/Chitralekh1"><i class="fa fa-twitter"></i></a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<p class="copyright_text text-center">© 2021 Beta Version</p>
+						</div>
+						
+						<div class="col-sm-4">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+      
+      
+      <script>
+        $('.menu, .overlay').click(function () {
+	$('.menu').toggleClass('clicked');
+	
+	$('#nav').toggleClass('show');
+	
+});  
+          
+      </script>
+      <script>
+         $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+    nav:true,
+    mouseDrag:false,
+    autoplay:true,
+    animateOut: 'slideOutUp',
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+}); 
+          
+      </script>
+      
+      <script>
+           wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+      
+    
+      </script>
+      
+      <script>
+        
+
+          
+          </script>
+          
+          <script>
+              $(document).ready(function($) {
+  $('#panel').find('.panel-toggle').click(function() {
+    // Change the active panel 'plus' symbol to a 'minus' symbol
+    $(this).find('.panel-symbol').toggleClass('fa-plus');
+    $(this).find('.panel-symbol').toggleClass('fa-minus');
+
+    // Expand or collapse this panel
+    $(this).next().slideToggle(400);
+  });
+});
+              
+          </script>
+          
+          <script>
+              $('.zaza > img').click(function () {
+  
+  $('#img01').attr('src', $(this).attr('src'));
+  // pop up display: block
+  $('.modal').show();
+});
+
+$('.close-model').click(function () {
+  // pop up display: none
+  $('.modal').hide();
+});
+
+              
+          </script>
+          
+          <script>
+             const stepButtons = document.querySelectorAll('.step-button');
+        const progress = document.querySelector('#progress');
+
+        Array.from(stepButtons).forEach((button,index) => {
+            button.addEventListener('click', () => {
+                progress.setAttribute('value', index * 100 /(stepButtons.length - 1) );//there are 3 buttons. 2 spaces.
+
+                stepButtons.forEach((item, secindex)=>{
+                    if(index > secindex){
+                        item.classList.add('done');
+                    }
+                    if(index < secindex){
+                        item.classList.remove('done');
+                    }
+                })
+            })
+        }) 
+              
+          </script>
+          
+          <script>
+           $(document).ready(function() {
+  $(".sexy").lettering();
+});
+   
+              
+          </script>
+  </body>
+</html>
